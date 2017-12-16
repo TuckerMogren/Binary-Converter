@@ -3,14 +3,17 @@
 * For the use of cin, count, endl, string, STD, etc..
 */
 #include <iostream>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 /*
 * Function prototypes for ValidBin, GetBin, ConvertBin,
 * ConvertDec, and MainMenuPick
 */
 bool ValidBin(std::string);
 std::string GetBinary();
-std::string ConvertFromBinary();
-unsigned double ConvertFromDecimal();
+double ConvertFromBinary(std::string num);
+std::string ConvertFromDecimal();
 char GetMenuPick();
 /*
 * Main Function
@@ -21,7 +24,8 @@ char GetMenuPick();
 */
 int main()
 {
-    GetBinary();
+    std::string binNum = GetBinary();
+    ConvertFromBinary(binNum);
     return 0;
 }
 /*
@@ -44,6 +48,14 @@ bool ValidBin (std::string num)
             break;
         }
     }
+    if(isEightBits)
+    {
+        std::cout << "The number is an 8-bit Binary Number" << std::endl;
+    }
+    if(!isEightBits)
+    {
+        std::cout << "The number is not 8-bit Binary Number" << std::endl;
+    }
     return isEightBits;
 }
 /*
@@ -61,16 +73,35 @@ std::string GetBinary ()
     std:: cin >> binNumber;
     bool errorCheck;
     errorCheck = ValidBin(binNumber);
-    if(errorCheck)
-    {
-        std::cout << "The number is an 8-bit Binary Number" << std::endl;
-    }
+
     if(!(errorCheck))
     {
-        std::cout << "The number is not an 8-bit Binary Number" << std::endl;
         std::cout << "Please try again" << std::endl;
         GetBinary();
     }
     return binNumber;
 }
+
+/*
+* Function ConvertFromBinary
+* Will take a String which is the binary number string
+* Will error check it to make sure its a binary number
+* will convert to the decimal equivalent as a double
+*/
+double ConvertFromBinary(std::string num)
+{
+    system("CLS");
+
+    char binray[num.size() + 1];
+
+    strcpy(binray, num.c_str());
+
+    int binNumber = atoi(binray); //thinks that this is a decimal number
+
+    std::cout << std::hex << binNumber;
+
+
+}
+
+
 
