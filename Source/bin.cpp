@@ -1,24 +1,11 @@
 #include <iostream>
-
-
 bool ValidBin(std::string);
 std::string GetBinary();
 int main()
 {
-    bool bit = ValidBin("00001110");
-    if(bit)
-    {
-        std::cout << "True." << std::endl;
-    }
-    if(!bit)
-    {
-        std::cout << "False." << std::endl;
-    }
-
+    GetBinary();
     return 0;
 }
-
-
 /*
 * Function ValidBin
 * Will return a bool type
@@ -42,12 +29,27 @@ bool ValidBin (std::string num)
     return isEightBits;
 }
 /*
-*
-*
-*
+* Function GetBinary
+* Will get a Binary Number (string) from the user
+* And then will use the ValidBinary function to make sure
+* The entered number is valid
+* Returns a string, returns a string
 */
 std::string GetBinary ()
 {
-    return "Tucker";
+    std::string binNumber;
+    std:: cout << "Please enter a 8-bit binary Number: ";
+    std:: cin >> binNumber;
+    bool errorCheck;
+    errorCheck = ValidBin(binNumber);
+    if(errorCheck)
+    {
+        std::cout << "The number is an 8-bit Binary Number" << std::endl;
+    }
+    if(!(errorCheck))
+    {
+        std::cout << "The number is not an 8-bit Binary Number" << std::endl;
+    }
+    return binNumber;
 }
 
