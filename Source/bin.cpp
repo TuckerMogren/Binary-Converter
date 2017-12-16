@@ -1,6 +1,21 @@
+/*
+* Include the directive iostream
+* For the use of cin, count, endl, string, STD, etc..
+*/
 #include <iostream>
+/*
+* Function prototypes for ValidBin, GetBin, ConvertBin,
+* ConvertDec, and MainMenuPick
+*/
 bool ValidBin(std::string);
 std::string GetBinary();
+/*
+* Main Function
+* Written by Tucker Mogren, 12/16/17
+* IDE: Code::Blocks
+* Language: C++
+* Compiler: MinGW GNU GCC
+*/
 int main()
 {
     GetBinary();
@@ -33,7 +48,8 @@ bool ValidBin (std::string num)
 * Will get a Binary Number (string) from the user
 * And then will use the ValidBinary function to make sure
 * The entered number is valid
-* Returns a string, returns a string
+* Enter a string, returns a string
+* Will recursively call GetBinary() if a 8-bit number is not entered
 */
 std::string GetBinary ()
 {
@@ -49,6 +65,8 @@ std::string GetBinary ()
     if(!(errorCheck))
     {
         std::cout << "The number is not an 8-bit Binary Number" << std::endl;
+        std::cout << "Please try again" << std::endl;
+        GetBinary();
     }
     return binNumber;
 }
