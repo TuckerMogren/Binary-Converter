@@ -9,6 +9,9 @@
 */
 bool ValidBin(std::string);
 std::string GetBinary();
+std::string ConvertFromBinary();
+unsigned double ConvertFromDecimal();
+char GetMenuPick();
 /*
 * Main Function
 * Written by Tucker Mogren, 12/16/17
