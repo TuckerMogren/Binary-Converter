@@ -38,8 +38,8 @@ int main()
 */
 bool ValidBin (std::string num)
 {
-    bool isEightBits;
-    int maxNum = num.length();
+    bool isEightBits = false;
+    unsigned long maxNum = num.length();
     for(int i = 0; i < 8 && maxNum == 8; i++)
     {
         if(num[i] == '1' || num[i] == '0')
@@ -96,7 +96,7 @@ double ConvertFromBinary(std::string num)
 {
     system("CLS");
     int total = 0;
-    int maxLen = num.length();
+    unsigned long maxLen = num.length();
 
     for(int i = 1; i <= maxLen; i++)
     {
