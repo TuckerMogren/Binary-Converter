@@ -25,7 +25,7 @@ char GetMenuPick();
 int main()
 {
     std::string binNum = GetBinary();
-    ConvertFromBinary(binNum);
+    int returnTotal = ConvertFromBinary(binNum);
     return 0;
 }
 /*
@@ -91,15 +91,44 @@ std::string GetBinary ()
 double ConvertFromBinary(std::string num)
 {
     system("CLS");
+    int total = 0;
 
-    char binray[num.size() + 1];
 
-    strcpy(binray, num.c_str());
+    if(num[0] == '1')
+    {
+        total += 128;
+    }
+    if(num[1] == '1')
+    {
+        total += 64;
+    }
+    if(num[2] == '1')
+    {
+        total += 32;
+    }
+    if(num[3] == '1')
+    {
+        total += 16;
+    }
+    if(num[4] == '1')
+    {
+        total += 8;
+    }
+    if(num[5] == '1')
+    {
+        total += 4;
+    }
+    if(num[6] == '1')
+    {
+        total += 2;
+    }
+    if(num[7] == '1')
+    {
+        total += 1;
+    }
 
-    int binNumber = atoi(binray); //thinks that this is a decimal number
-
-    std::cout << std::hex << binNumber;
-
+    std::cout << "The binary number: " << num << " in decimal is: " << total << std::endl;
+    return total;
 
 }
 
