@@ -5,7 +5,22 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
-#include <string>
+#include <sstream>
+/*
+* Template std::string to_string
+* Add one template for MinGW
+* In order to get the function std::to_string to work
+* If using C++11, this template is not needed
+*/
+namespace patch
+{
+    template < typename T > std::string to_string( const T& n )
+    {
+        std::ostringstream stm ;
+        stm << n ;
+        return stm.str() ;
+    }
+}
 /*
 * Function prototypes for ValidBin, GetBin, ConvertBin,
 * ConvertDec, and MainMenuPick
@@ -24,11 +39,12 @@ char GetMenuPick();
 */
 int main()
 {
-    std::string binNum = GetBinary();
-    int returnTotal = ConvertFromBinary(binNum);
-    std::cout << returnTotal << std::endl;
-    std::string temp = ConvertFromDecimal(255);
-    std::cout << temp << std::endl;
+    char choice = GetMenuPick();
+    //std::string binNum = GetBinary();
+    //int returnTotal = ConvertFromBinary(binNum);
+    //std::cout << returnTotal << std::endl;
+    //std::string temp = ConvertFromDecimal(255);
+    //std::cout << temp << std::endl;
     return 0;
 }
 /*
@@ -40,7 +56,7 @@ bool ValidBin (std::string num)
 {
     bool isEightBits = false;
     unsigned long maxNum = num.length();
-    for(int i = 0; i < 8 && maxNum == 8; i++)
+    for(unsigned int i = 0; i < 8 && maxNum == 8; i++)
     {
         if(num[i] == '1' || num[i] == '0')
         {
@@ -98,7 +114,7 @@ double ConvertFromBinary(std::string num)
     int total = 0;
     unsigned long maxLen = num.length();
 
-    for(int i = 1; i <= maxLen; i++)
+    for(unsigned int i = 1; i <= maxLen; i++)
     {
         if(num[i-1] == '1')
         {
@@ -127,10 +143,36 @@ std::string ConvertFromDecimal(int baseTenNumber)
 
     for(int j = i-1; j >= 0; j--)
     {
-        binaryString += std::to_string(binaryNumber[j]);
+        binaryString += patch::to_string(binaryNumber[j]);
     }
     return binaryString;
 }
+/*
+* Function GetMenuPick
+* Gets a single char from the user (Upper or Lower case)
+* Continue to prompt until a valid character is entered
+* Will return the character and program will perform option based on that.
+*/
+char GetMenuPick()
+{
+    char userChoice = 'x';
+    std::cout << "Please enter a character to perform an operation: ";
+    std::cin >> userChoice;
+    userChoice = std::toupper(userChoice);
 
+
+    while (userChoice != '+' && userChoice != '-' && userChoice != '/' && userChoice != '*' && userChoice != '%' &&
+           userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
+    {
+        std::cout << "Wrong value entered, please try again" << std::endl;
+        std::cout << "Please enter a character to perform an operation: ";
+        std::cin >> userChoice;
+        userChoice = std::toupper(userChoice);
+    }
+
+
+    return userChoice;
+
+}
 
 
