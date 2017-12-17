@@ -5,6 +5,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
+#include <string>
 /*
 * Function prototypes for ValidBin, GetBin, ConvertBin,
 * ConvertDec, and MainMenuPick
@@ -23,10 +24,10 @@ char GetMenuPick();
 */
 int main()
 {
-    //std::string binNum = GetBinary();
-    //int returnTotal = ConvertFromBinary(binNum);
- //   std::cout << returnTotal << std::endl;
-    std::string temp = ConvertFromDecimal(32);
+    std::string binNum = GetBinary();
+    int returnTotal = ConvertFromBinary(binNum);
+    std::cout << returnTotal << std::endl;
+    std::string temp = ConvertFromDecimal(255);
     std::cout << temp << std::endl;
     return 0;
 }
@@ -114,20 +115,21 @@ double ConvertFromBinary(std::string num)
 */
 std::string ConvertFromDecimal(int baseTenNumber)
 {
-    std::string binaryNumber;
-
-    for(int i = baseTenNumber; i >= 0; i++ )
+    int binaryNumber[100];
+    std::string binaryString;
+    int i = 0;
+    while(baseTenNumber > 0)
     {
-        int temp = baseTenNumber % 2;
-        binaryNumber += temp;
-        while(baseTenNumber > 0)
-        {
-            baseTenNumber = baseTenNumber / 2;
-        }
-
+         binaryNumber[i] = baseTenNumber % 2;
+         i++;
+         baseTenNumber = baseTenNumber/2;
     }
 
-    return binaryNumber;
+    for(int j = i-1; j >= 0; j--)
+    {
+        binaryString += std::to_string(binaryNumber[j]);
+    }
+    return binaryString;
 }
 
 
