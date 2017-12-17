@@ -23,9 +23,11 @@ char GetMenuPick();
 */
 int main()
 {
-    std::string binNum = GetBinary();
-    int returnTotal = ConvertFromBinary(binNum);
-    std::cout << returnTotal << std::endl;
+    //std::string binNum = GetBinary();
+    //int returnTotal = ConvertFromBinary(binNum);
+ //   std::cout << returnTotal << std::endl;
+    std::string temp = ConvertFromDecimal(32);
+    std::cout << temp << std::endl;
     return 0;
 }
 /*
@@ -112,7 +114,20 @@ double ConvertFromBinary(std::string num)
 */
 std::string ConvertFromDecimal(int baseTenNumber)
 {
-    return "Temp";
+    std::string binaryNumber;
+
+    for(int i = baseTenNumber; i >= 0; i++ )
+    {
+        int temp = baseTenNumber % 2;
+        binaryNumber += temp;
+        while(baseTenNumber > 0)
+        {
+            baseTenNumber = baseTenNumber / 2;
+        }
+
+    }
+
+    return binaryNumber;
 }
 
 
