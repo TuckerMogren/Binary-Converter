@@ -4,8 +4,7 @@
 */
 #include <iostream>
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include <math.h>
 /*
 * Function prototypes for ValidBin, GetBin, ConvertBin,
 * ConvertDec, and MainMenuPick
@@ -13,7 +12,7 @@
 bool ValidBin(std::string);
 std::string GetBinary();
 double ConvertFromBinary(std::string num);
-std::string ConvertFromDecimal();
+std::string ConvertFromDecimal(int baseTenNumber);
 char GetMenuPick();
 /*
 * Main Function
@@ -26,6 +25,7 @@ int main()
 {
     std::string binNum = GetBinary();
     int returnTotal = ConvertFromBinary(binNum);
+    std::cout << returnTotal << std::endl;
     return 0;
 }
 /*
@@ -92,43 +92,26 @@ double ConvertFromBinary(std::string num)
 {
     system("CLS");
     int total = 0;
+    int maxLen = num.length();
 
-
-    if(num[0] == '1')
+    for(int i = 1; i <= maxLen; i++)
     {
-        total += 128;
+        if(num[i-1] == '1')
+        {
+            total += pow(2, num.length() - i);
+        }
     }
-    if(num[1] == '1')
-    {
-        total += 64;
-    }
-    if(num[2] == '1')
-    {
-        total += 32;
-    }
-    if(num[3] == '1')
-    {
-        total += 16;
-    }
-    if(num[4] == '1')
-    {
-        total += 8;
-    }
-    if(num[5] == '1')
-    {
-        total += 4;
-    }
-    if(num[6] == '1')
-    {
-        total += 2;
-    }
-    if(num[7] == '1')
-    {
-        total += 1;
-    }
-
-    std::cout << "The binary number: " << num << " in decimal is: " << total << std::endl;
     return total;
+}
+
+
+/*
+* Function ConvertFromDecimal
+* Will take a single int base 10 number
+* And will convert and return the string binary equivalent
+*/
+std::string ConvertFromDecimal(int baseTenNumber)
+{
 
 }
 

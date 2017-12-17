@@ -5,9 +5,10 @@
 1513452587 source:c:\users\mogrent\desktop\bens c++ assignment\bin converter\bin.cpp
 	<iostream>
 
-1513469618 source:c:\users\mogrent\documents\github\binary-converter\source\bin.cpp
+1513485749 source:c:\users\mogrent\documents\github\binary-converter\source\bin.cpp
 	<iostream>
 	<stdlib.h>
 	<string.h>
 	<stdio.h>
+	<math.h>
 
