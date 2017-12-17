@@ -86,7 +86,7 @@ std::string GetBinary ()
 * Function ConvertFromBinary
 * Will take a String which is the binary number string
 * Will error check it to make sure its a binary number
-* will convert to the decimal equivalent as a double
+* will convert to the decimal equivalent into an int
 */
 double ConvertFromBinary(std::string num)
 {
