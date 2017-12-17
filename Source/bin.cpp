@@ -1,6 +1,6 @@
 /*
 * Include the directive iostream
-* For the use of cin, count, endl, string, STD, etc..
+* For the use of cin, count, endl, string, STD, pow, etc..
 */
 #include <iostream>
 #include <stdlib.h>
@@ -36,7 +36,8 @@ int main()
 bool ValidBin (std::string num)
 {
     bool isEightBits;
-    for(int i = 0; i < 8 && num.length() == 8; i++)
+    int maxNum = num.length();
+    for(int i = 0; i < 8 && maxNum == 8; i++)
     {
         if(num[i] == '1' || num[i] == '0')
         {
@@ -104,7 +105,6 @@ double ConvertFromBinary(std::string num)
     return total;
 }
 
-
 /*
 * Function ConvertFromDecimal
 * Will take a single int base 10 number
@@ -112,7 +112,7 @@ double ConvertFromBinary(std::string num)
 */
 std::string ConvertFromDecimal(int baseTenNumber)
 {
-
+    return "Temp";
 }
 
 
