@@ -23,13 +23,14 @@ namespace patch
 }
 /*
 * Function prototypes for ValidBin, GetBin, ConvertBin,
-* ConvertDec, and MainMenuPick
+* ConvertDec, GetMenuPick, and MenuFunctions.
 */
 bool ValidBin(std::string);
 std::string GetBinary();
-double ConvertFromBinary(std::string num);
-std::string ConvertFromDecimal(int baseTenNumber);
+double ConvertFromBinary(std::string);
+std::string ConvertFromDecimal(int);
 char GetMenuPick();
+void MenuFunctions(char);
 /*
 * Main Function
 * Written by Tucker Mogren, 12/16/17
@@ -40,11 +41,8 @@ char GetMenuPick();
 int main()
 {
     char choice = GetMenuPick();
-    //std::string binNum = GetBinary();
-    //int returnTotal = ConvertFromBinary(binNum);
-    //std::cout << returnTotal << std::endl;
-    //std::string temp = ConvertFromDecimal(255);
-    //std::cout << temp << std::endl;
+    MenuFunctions(choice);
+
     return 0;
 }
 /*
@@ -174,5 +172,36 @@ char GetMenuPick()
     return userChoice;
 
 }
+/*
+* Function MenuFunctions
+* Will take a char which is the options the user wants to perform.
+* Will activate and run the function that was being called upon
+*/
+void MenuFunctions(char entry)
+{
+    switch(entry)
+    {
+    case 'C':
+        {
+        int num;
+        std::string newNum;
+        std::cout << "Enter a decimal Number to convert: ";
+        std::cin >> num;
+        newNum = ConvertFromDecimal(num);
+        std::cout << newNum;
+        }
+        break;
 
+    case 'B':
+        {
+        std::string binNum;
+        std::cout << "Please enter a binary Number to convert: ";
+        std::cin >> binNum;
+        int decNum = ConvertFromBinary(binNum);
+        std::cout << decNum;
+        }
+
+        break;
+    }
+}
 
