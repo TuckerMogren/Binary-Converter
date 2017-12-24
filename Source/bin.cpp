@@ -188,7 +188,7 @@ void MenuFunctions(char entry)
         std::cout << "Enter a decimal Number to convert: ";
         std::cin >> num;
         newNum = ConvertFromDecimal(num);
-        std::cout << newNum;
+        std::cout << newNum << std::endl;
         }
         break;
 
@@ -198,7 +198,7 @@ void MenuFunctions(char entry)
         std::cout << "Please enter a binary Number to convert: ";
         std::cin >> binNum;
         int decNum = ConvertFromBinary(binNum);
-        std::cout << decNum;
+        std::cout << decNum << std::endl;
         }
 
         break;
