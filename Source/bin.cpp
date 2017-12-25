@@ -108,7 +108,6 @@ std::string GetBinary ()
 */
 double ConvertFromBinary(std::string num)
 {
-    system("CLS");
     int total = 0;
     unsigned long maxLen = num.length();
 
@@ -159,8 +158,7 @@ char GetMenuPick()
     userChoice = std::toupper(userChoice);
 
 
-    while (userChoice != '+' && userChoice != '-' && userChoice != '/' && userChoice != '*' && userChoice != '%' &&
-           userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
+    while (userChoice != '+' && userChoice != '-' && userChoice != '/' && userChoice != '*' && userChoice != '%' && userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
     {
         std::cout << "Wrong value entered, please try again" << std::endl;
         std::cout << "Please enter a character to perform an operation: ";
