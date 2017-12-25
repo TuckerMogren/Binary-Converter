@@ -108,7 +108,6 @@ std::string GetBinary ()
 */
 double ConvertFromBinary(std::string num)
 {
-    //Put clear function here
     int total = 0;
     unsigned long maxLen = num.length();
 
