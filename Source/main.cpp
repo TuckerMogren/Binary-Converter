@@ -3,17 +3,12 @@
 * For the use of cin, count, endl, string, STD, pow, etc..
 */
 #include <iostream>
-#include <stdlib.h>
 #include <math.h>
-#include <sstream>
+#include "Conversion.h"
 /*
 * Function prototypes for ValidBin, GetBin, ConvertBin,
 * ConvertDec, GetMenuPick, and MenuFunctions.
 */
-bool ValidBin(std::string);
-std::string GetBinary();
-double ConvertFromBinary(std::string);
-std::string ConvertFromDecimal(int);
 char GetMenuPick();
 void MenuFunctions(char);
 /*
