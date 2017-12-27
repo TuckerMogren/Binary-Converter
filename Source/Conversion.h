@@ -13,6 +13,8 @@ private:
     std::string GetBinary();
     double ConvertFromBinary(std::string);
     std::string ConvertFromDecimal(int);
+    int decNumber;
+    std::string binNumber;
 public:
     Conversion();
     ~Conversion();
