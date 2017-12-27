@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F96FB471FF3F7BB00B92589 /* Conversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F96FB461FF3F7BB00B92589 /* Conversion.cpp */; };
 		3FD4F2BC1FE6F67A00E69635 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4F2BB1FE6F67A00E69635 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		3F96FB451FF3F3F400B92589 /* Conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Conversion.h; path = ../../../Source/Conversion.h; sourceTree = "<group>"; };
+		3F96FB461FF3F7BB00B92589 /* Conversion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion.cpp; path = ../../../Source/Conversion.cpp; sourceTree = "<group>"; };
 		3FD4F2B11FE6F64700E69635 /* BinaryConvert */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryConvert; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD4F2BB1FE6F67A00E69635 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../Source/main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				3FD4F2BB1FE6F67A00E69635 /* main.cpp */,
+				3F96FB461FF3F7BB00B92589 /* Conversion.cpp */,
 				3F96FB451FF3F3F400B92589 /* Conversion.h */,
 			);
 			path = BinaryConvert;
@@ -122,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD4F2BC1FE6F67A00E69635 /* main.cpp in Sources */,
+				3F96FB471FF3F7BB00B92589 /* Conversion.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
