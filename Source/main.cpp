@@ -7,21 +7,6 @@
 #include <math.h>
 #include <sstream>
 /*
-* Template std::string to_string
-* Add one template for MinGW
-* In order to get the function std::to_string to work
-* If using C++11, this template is not needed
-*/
-namespace patch
-{
-    template < typename T > std::string to_string( const T& n )
-    {
-        std::ostringstream stm ;
-        stm << n ;
-        return stm.str() ;
-    }
-}
-/*
 * Function prototypes for ValidBin, GetBin, ConvertBin,
 * ConvertDec, GetMenuPick, and MenuFunctions.
 */
@@ -140,7 +125,7 @@ std::string ConvertFromDecimal(int baseTenNumber)
 
     for(int j = i-1; j >= 0; j--)
     {
-        binaryString += patch::to_string(binaryNumber[j]);
+        binaryString += std::to_string(binaryNumber[j]);
     }
     return binaryString;
 }
