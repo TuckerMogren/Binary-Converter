@@ -9,7 +9,7 @@
 #include <string>
 class Conversion
 {
-private:
+protected:
     bool ValidBin(std::string);
     std::string GetBinary();
     double ConvertFromBinary(std::string);
@@ -19,11 +19,6 @@ private:
 public:
     Conversion();
     ~Conversion();
-    std::string getbinNumber();
-    void setbinNumber(std::string);
-    int getdecNumber();
-    void setdecNumber(int);
-    
 };
 
 #endif /* Conversion_h */

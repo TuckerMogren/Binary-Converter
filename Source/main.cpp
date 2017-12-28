@@ -4,11 +4,7 @@
 */
 #include <iostream>
 #include "Conversion.h"
-/*
-* Function prototypes
-*/
-char GetMenuPick();
-void MenuFunctions(char, Conversion);
+
 /*
 * Main Function
 * Written by Tucker Mogren, 12/16/17
