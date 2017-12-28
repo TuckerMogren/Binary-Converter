@@ -6,6 +6,7 @@
 
 #ifndef Conversion_h
 #define Conversion_h
+#include <string>
 class Conversion
 {
 private:
