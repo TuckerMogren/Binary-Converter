@@ -1,18 +1,18 @@
 #ifndef MainMenu_hpp
 #define MainMenu_hpp
 
-#include "Conversion.h"
-#include <iostream>
+#include Conversion.h
+#include iostream
 
-class MainMenu : protected Conversion
+class MainMenu  protected Conversion
 {
-private:
+private
     char GetMenuPick();
     void MenuFunctions(char);
-public:
+public
     MainMenu();
     ~MainMenu();
 
 };
 
-#endif /* MainMenu_hpp */
+#endif  MainMenu_hpp 
