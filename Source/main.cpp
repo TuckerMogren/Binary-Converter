@@ -4,7 +4,6 @@
 */
 #include <iostream>
 #include "MainMenu.h"
-
 /*
 * Main Function
 * Written by Tucker Mogren, 12/16/17
@@ -15,11 +14,7 @@
 int main()
 {
     MainMenu *mainmenu = new MainMenu();
-
-
     mainmenu->run();
-
-
     delete mainmenu;
     return 0;
 }
