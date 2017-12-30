@@ -32,6 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../../Source/Conversion.cpp" />
+		<Unit filename="../../Source/Conversion.h" />
+		<Unit filename="../../Source/MainMenu.cpp" />
+		<Unit filename="../../Source/MainMenu.h" />
+		<Unit filename="../../Source/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
