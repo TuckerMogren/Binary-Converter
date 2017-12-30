@@ -1,10 +1,10 @@
-#ifndef MainMenu_hpp
-#define MainMenu_hpp
+#ifndef MainMenu_h
+#define MainMenu_h
 
 #include Conversion.h
 #include iostream
 
-class MainMenu  protected Conversion
+class MainMenu protected Conversion
 {
 private
     char GetMenuPick();
@@ -15,4 +15,4 @@ public
 
 };
 
-#endif  MainMenu_hpp 
+#endif  MainMenu_h
