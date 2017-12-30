@@ -14,6 +14,8 @@ class MainMenu : protected Conversion
 private:
     char GetMenuPick();
     void MenuFunctions(char);
+    void menubinaryConvert();
+    void menudecimalConvert();
 public:
     void run();
     MainMenu();

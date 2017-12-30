@@ -70,23 +70,38 @@ void MainMenu::MenuFunctions(char entry)
     switch(entry)
     {
         case 'C':
-        {
-            std::cout << "Enter a decimal Number to convert: ";
-            std::cin >> num;
-            binNum = ConvertFromDecimal(num);
-            std::cout << binNum << std::endl;
-        }
+            menubinaryConvert();
             break;
 
         case 'B':
-        {
-            std::string binNum;
-            std::cout << "Please enter a binary Number to convert: ";
-            std::cin >> binNum;
-            num = ConvertFromBinary(binNum);
-            std::cout << num << std::endl;
-        }
-
+            menudecimalConvert();
             break;
     }
+}
+/*
+ * Function menubinaryConvert
+ * Takes nothing, returns nothing
+ * Will ask for a decimal number and will return
+ * The string equivalent in binary form and display it.
+ */
+void MainMenu::menubinaryConvert()
+{
+    std::cout << "Enter a decimal Number to convert: ";
+    std::cin >> num;
+    binNum = ConvertFromDecimal(num);
+    std::cout << binNum << std::endl;
+}
+/* Function menudecimalConvert
+ * Takes nothing, returns nothing
+ * Will ask for a binary string and
+ * will convert the string to
+ * Its decimal number equivalent and display the value.
+ */
+void MainMenu::menudecimalConvert()
+{
+    std::string binNum;
+    std::cout << "Please enter a binary Number to convert: ";
+    std::cin >> binNum;
+    num = ConvertFromBinary(binNum);
+    std::cout << num << std::endl;
 }
