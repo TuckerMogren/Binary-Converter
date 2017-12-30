@@ -1,21 +1,21 @@
 # depslib dependency file v1.0
-1514500276 source:c:\users\mogrent\documents\github\binary-converter\source\conversion.cpp
+1514620176 source:c:\users\mogrent\documents\github\binary-converter\source\conversion.cpp
 	<string>
 	<iostream>
 	<math.h>
 	"Conversion.h"
 
-1514500276 c:\users\mogrent\documents\github\binary-converter\source\conversion.h
+1514620176 c:\users\mogrent\documents\github\binary-converter\source\conversion.h
 	<string>
 
-1514617529 source:c:\users\mogrent\documents\github\binary-converter\source\main.cpp
+1514620458 source:c:\users\mogrent\documents\github\binary-converter\source\main.cpp
 	<iostream>
 	"MainMenu.h"
 
-1514617594 source:c:\users\mogrent\documents\github\binary-converter\source\mainmenu.cpp
+1514621123 source:c:\users\mogrent\documents\github\binary-converter\source\mainmenu.cpp
 	"MainMenu.h"
 
-1514617830 c:\users\mogrent\documents\github\binary-converter\source\mainmenu.h
+1514620011 c:\users\mogrent\documents\github\binary-converter\source\mainmenu.h
 	"Conversion.h"
 	<iostream>
 

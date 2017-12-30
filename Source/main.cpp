@@ -16,6 +16,10 @@ int main()
 {
     MainMenu *mainmenu = new MainMenu();
 
+
+    mainmenu->run();
+
+
     delete mainmenu;
     return 0;
 }

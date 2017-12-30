@@ -12,13 +12,14 @@ class Conversion
 protected:
     bool ValidBin(std::string);
     std::string GetBinary();
-    double ConvertFromBinary(std::string);
+    int ConvertFromBinary(std::string);
     std::string ConvertFromDecimal(int);
-    int decNumber;
-    std::string binNumber;
 public:
     Conversion();
     ~Conversion();
+private:
+    int decNumber;
+    std::string binNumber;
 };
 
 #endif /* Conversion_h */

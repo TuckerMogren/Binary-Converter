@@ -6,17 +6,38 @@
 
 
 #include "MainMenu.h"
-
+/*
+* Class Constructor
+* Inits the binNum, num, and userChoice vars
+*/
 MainMenu::MainMenu()
 {
-    GetMenuPick();
+
+    binNum = "1111111";
+    num = 255;
+    userChoice = 'X';
 
 }
+/*
+* Class destructor
+* Does nothing, Used to delete the pointer
+*/
 MainMenu::~MainMenu()
 {
 
 }
+/*
+* Function run()
+* Void, returns nothing
+* will allow for the protected class
+* functions to be ran from main.cpp
+*/
+void MainMenu::run()
+{
 
+    userChoice = GetMenuPick();
+    MenuFunctions(userChoice);
+}
 /*
  * Function GetMenuPick
  * Gets a single char from the user (Upper or Lower case)
@@ -25,18 +46,14 @@ MainMenu::~MainMenu()
  */
 char MainMenu::GetMenuPick()
 {
-    char userChoice = 'x';
+
     std::cout << "Please enter a character to perform an operation: ";
     std::cin >> userChoice;
     userChoice = std::toupper(userChoice);
-
-
     while (userChoice != '+' && userChoice != '-' && userChoice != '/' && userChoice != '*' && userChoice != '%' && userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
     {
         std::cout << "Wrong value entered, please try again" << std::endl;
-        std::cout << "Please enter a character to perform an operation: ";
-        std::cin >> userChoice;
-        userChoice = std::toupper(userChoice);
+        GetMenuPick();
     }
 
 
@@ -54,12 +71,10 @@ void MainMenu::MenuFunctions(char entry)
     {
         case 'C':
         {
-            int num;
-            std::string newNum;
             std::cout << "Enter a decimal Number to convert: ";
             std::cin >> num;
-            newNum = ConvertFromBinary(newNum);
-            std::cout << newNum << std::endl;
+            binNum = ConvertFromDecimal(num);
+            std::cout << binNum << std::endl;
         }
             break;
 
@@ -68,8 +83,8 @@ void MainMenu::MenuFunctions(char entry)
             std::string binNum;
             std::cout << "Please enter a binary Number to convert: ";
             std::cin >> binNum;
-            int decNum = ConvertFromBinary(binNum);
-            std::cout << decNum << std::endl;
+            num = ConvertFromBinary(binNum);
+            std::cout << num << std::endl;
         }
 
             break;

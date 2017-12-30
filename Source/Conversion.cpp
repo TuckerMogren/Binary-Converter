@@ -18,7 +18,7 @@ Conversion::Conversion()
 }
 Conversion::~Conversion()
 {
-    
+
 }
 /*
  * Function ValidBin
@@ -66,7 +66,7 @@ std::string Conversion::GetBinary ()
     std:: cin >> binNumber;
     bool errorCheck;
     errorCheck = ValidBin(binNumber);
-    
+
     if(!(errorCheck))
     {
         std::cout << "Please try again" << std::endl;
@@ -80,11 +80,11 @@ std::string Conversion::GetBinary ()
  * Will error check it to make sure its a binary number
  * will convert to the decimal equivalent into an int
  */
-double Conversion::ConvertFromBinary(std::string num)
+int Conversion::ConvertFromBinary(std::string num)
 {
     int total = 0;
     unsigned long maxLen = num.length();
-    
+
     for(unsigned int i = 1; i <= maxLen; i++)
     {
         if(num[i-1] == '1')
@@ -110,7 +110,7 @@ std::string Conversion::ConvertFromDecimal(int baseTenNumber)
         i++;
         baseTenNumber = baseTenNumber/2;
     }
-    
+
     for(int j = i-1; j >= 0; j--)
     {
         binaryString += std::to_string(binaryNumber[j]);

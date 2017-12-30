@@ -12,13 +12,17 @@
 class MainMenu : protected Conversion
 {
 private:
-    void run();
     char GetMenuPick();
     void MenuFunctions(char);
 public:
-    void setChoice(char);
+    void run();
     MainMenu();
     ~MainMenu();
+
+private:
+    int num;
+    std::string binNum;
+    char userChoice;
 
 };
 
