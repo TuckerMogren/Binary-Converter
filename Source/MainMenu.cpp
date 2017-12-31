@@ -4,6 +4,7 @@
 * For the mainmenu
 */
 #include "MainMenu.h"
+#include <string>
 /*
 * Class Constructor
 * Inits the binNum, num, and userChoice vars
@@ -56,11 +57,12 @@ char MainMenu::GetMenuPick()
 
     std::cout << "Enter 'B' to convert from bianry to decimal," << std::endl;
     std::cout << "Enter 'C' to convert from decimal to binary," << std::endl;
+    std::cout << "Enter 'A' to add two binary numbers together," << std::endl;
     std::cout << "Enter 'Q' to quit the program." << std::endl;
     std::cout << "\nPlease enter a character to perform an operation: ";
     std::cin >> userChoice;
     userChoice = std::toupper(userChoice);
-    while (userChoice != '+' && userChoice != '-' && userChoice != '/' && userChoice != '*' && userChoice != '%' && userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
+    while (userChoice != 'A' && userChoice != 'S' && userChoice != 'D' && userChoice != 'M' && userChoice != '%' && userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
     {
         std::cout << "Wrong value entered, please try again" << std::endl;
         GetMenuPick();
@@ -79,14 +81,18 @@ void MainMenu::MenuFunctions(char entry)
 {
     switch(entry)
     {
-        case 'C':
-            menubinaryConvert();
+        case 'A':
+            menuaddNumbers();
             clearMenu();
             run();
             break;
-
         case 'B':
             menudecimalConvert();
+            clearMenu();
+            run();
+            break;
+        case 'C':
+            menubinaryConvert();
             clearMenu();
             run();
             break;
@@ -132,4 +138,24 @@ int MainMenu::menuQuit()
     std::cout << "\nThank you for using my program." << std::endl;
     std::cout << "Good-Bye!"  << std::endl;
     return 0;
+}
+/*
+ * Function menuaddNumbers()
+ * Takes nothing, returns nothing
+ * Will add two binary numbers together
+ * and then display the output (result).
+ * Will take the string, convert to dec
+ * Then add the dec nums together and convert that to bin.
+ */
+void MainMenu::menuaddNumbers()
+{
+    std::string binnumberOne;
+    std::string binnumberTwo;
+    
+    std::cout << "Please enter two binary numbers to be added together: ";
+    std::cin >> binnumberOne;
+    std::cin >> binnumberTwo;
+    
+    
+    
 }
