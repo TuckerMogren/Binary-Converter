@@ -61,7 +61,6 @@ bool Conversion::ValidBin(std::string num)
  */
 std::string Conversion::GetBinary ()
 {
-    std::string binNumber;
     std:: cout << "Please enter a 8-bit binary Number: ";
     std:: cin >> binNumber;
     bool errorCheck;

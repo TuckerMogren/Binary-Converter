@@ -3,8 +3,6 @@
 * Class header will hold the function deffs
 * For the mainmenu
 */
-
-
 #include "MainMenu.h"
 /*
 * Class Constructor
@@ -39,6 +37,15 @@ void MainMenu::run()
     MenuFunctions(userChoice);
 }
 /*
+ * Function clearMenu()
+ * Void, returns nothing
+ * Will allow for the terminal to be "cleared"
+ */
+void MainMenu::clearMenu()
+{
+    std::cout << "****************************************************" << std::endl;
+}
+/*
  * Function GetMenuPick
  * Gets a single char from the user (Upper or Lower case)
  * Continue to prompt until a valid character is entered
@@ -47,7 +54,10 @@ void MainMenu::run()
 char MainMenu::GetMenuPick()
 {
 
-    std::cout << "Please enter a character to perform an operation: ";
+    std::cout << "Enter 'B' to convert from bianry to decimal" << std::endl;
+    std::cout << "Enter 'C' to convert from decimal to binary" << std::endl;
+    std::cout << "Enter 'Q' to quit the program" << std::endl;
+    std::cout << "\nPlease enter a character to perform an operation: ";
     std::cin >> userChoice;
     userChoice = std::toupper(userChoice);
     while (userChoice != '+' && userChoice != '-' && userChoice != '/' && userChoice != '*' && userChoice != '%' && userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
@@ -71,10 +81,17 @@ void MainMenu::MenuFunctions(char entry)
     {
         case 'C':
             menubinaryConvert();
+            clearMenu();
+            run();
             break;
 
         case 'B':
             menudecimalConvert();
+            clearMenu();
+            run();
+            break;
+        case 'Q':
+            menuQuit();
             break;
     }
 }
@@ -86,12 +103,13 @@ void MainMenu::MenuFunctions(char entry)
  */
 void MainMenu::menubinaryConvert()
 {
-    std::cout << "Enter a decimal Number to convert: ";
+    std::cout << "\nEnter a decimal Number to convert: ";
     std::cin >> num;
     binNum = ConvertFromDecimal(num);
-    std::cout << binNum << std::endl;
+    std::cout << "\nThe decimal number: " << num << " is: " << binNum << " in binary form." << std::endl;
 }
-/* Function menudecimalConvert
+/*
+ * Function menudecimalConvert
  * Takes nothing, returns nothing
  * Will ask for a binary string and
  * will convert the string to
@@ -99,9 +117,19 @@ void MainMenu::menubinaryConvert()
  */
 void MainMenu::menudecimalConvert()
 {
-    std::string binNum;
-    std::cout << "Please enter a binary Number to convert: ";
+    std::cout << "\nPlease enter a binary Number to convert: ";
     std::cin >> binNum;
     num = ConvertFromBinary(binNum);
-    std::cout << num << std::endl;
+    std::cout << "\nThe binary number: "<< binNum <<" is: "<< num << " in decimal form." << std::endl;
+}
+/*
+ * Function menuQuit()
+ * Returns int (0), takes nothing
+ * Will terminate the program
+ */
+int MainMenu::menuQuit()
+{
+    std::cout << "\nThank you for using my program." << std::endl;
+    std::cout << "Good-Bye!"  << std::endl;
+    return 0;
 }
