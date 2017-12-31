@@ -7,9 +7,8 @@
 /*
 * Main Function
 * Written by Tucker Mogren, 12/16/17
-* IDE: Code::Blocks
+* IDE: Code::Blocks 16.02 AND Xcode 9.2
 * Language: C++
-* Compiler: MinGW GNU GCC
 */
 int main()
 {

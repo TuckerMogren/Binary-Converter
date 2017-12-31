@@ -54,9 +54,9 @@ void MainMenu::clearMenu()
 char MainMenu::GetMenuPick()
 {
 
-    std::cout << "Enter 'B' to convert from bianry to decimal" << std::endl;
-    std::cout << "Enter 'C' to convert from decimal to binary" << std::endl;
-    std::cout << "Enter 'Q' to quit the program" << std::endl;
+    std::cout << "Enter 'B' to convert from bianry to decimal," << std::endl;
+    std::cout << "Enter 'C' to convert from decimal to binary," << std::endl;
+    std::cout << "Enter 'Q' to quit the program." << std::endl;
     std::cout << "\nPlease enter a character to perform an operation: ";
     std::cin >> userChoice;
     userChoice = std::toupper(userChoice);
