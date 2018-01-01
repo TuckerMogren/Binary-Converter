@@ -157,27 +157,51 @@ void MainMenu::menuaddNumbers()
 {
     std::string binnumberOne;
     std::string binnumberTwo;
-    
+
     std::cout << "Please enter two binary numbers to be added together: ";
     std::cin >> binnumberOne;
     std::cin >> binnumberTwo;
-    
+
     int num1 = ConvertFromBinary(binnumberOne);
     int num2 = ConvertFromBinary(binnumberTwo);
-    
+
     int result = num1 + num2;
-    
+
     std::string binResult = ConvertFromDecimal(result);
-    
+
     std::cout << "The result of " << num1 << " + " << num2;
     std::cout << " is " << binResult << "." << std::endl;
 }
+/*
+ * Function menusubNumbers()
+ * Takes nothing, returns nothing
+ * Will subtract two binary numbers
+ * and then display the output (result).
+ * will take a string binary number
+ * Then will convert to decimal, subtract
+ * and convert the result back to binary and display
+ */
 void MainMenu::menusubNumbers()
 {
     std::string binnumberOne;
     std::string binnumberTwo;
-    
+
     std::cout << "Please enter two binary numbers to be subtracted: ";
     std::cin >> binnumberOne;
     std::cin >> binnumberTwo;
+
+    int num1 = ConvertFromBinary(binnumberOne);
+    int num2 = ConvertFromBinary(binnumberTwo);
+
+    int result = num1 - num2;
+
+    if (result < 0)
+    {
+        std::cout << "result of two numbers subtracted is negative, please try again" <<  std::endl;
+        menusubNumbers();
+    }
+        std::string binResult = ConvertFromDecimal(result);
+
+    std::cout << "The result of " << num1 << " - " << num2;
+    std::cout << " is " << binResult << "." << std::endl;
 }
