@@ -45,10 +45,11 @@ bool Conversion::ValidBin(std::string num)
     if(isEightBits)
     {
         std::cout << "The number is an 8-bit Binary Number" << std::endl;
+        std::cout << "The number is an Binary Number" << std::endl;
     }
     if(!isEightBits)
     {
-        std::cout << "The number is not 8-bit Binary Number" << std::endl;
+        std::cout << "The number is not Binary Number" << std::endl;
     }
     return isEightBits;
 }
@@ -62,7 +63,7 @@ bool Conversion::ValidBin(std::string num)
  */
 std::string Conversion::GetBinary ()
 {
-    std:: cout << "Please enter a 8-bit binary Number: ";
+    std:: cout << "Please enter a binary Number: ";
     std:: cin >> binNumber;
     bool errorCheck;
     errorCheck = ValidBin(binNumber);
