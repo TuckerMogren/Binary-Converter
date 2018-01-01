@@ -17,6 +17,7 @@ private:
     void menubinaryConvert();
     void menudecimalConvert();
     void menuaddNumbers();
+    void menusubNumbers();
     int menuQuit();
     void clearMenu();
 public:

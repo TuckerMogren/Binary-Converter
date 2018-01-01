@@ -55,9 +55,10 @@ void MainMenu::clearMenu()
 char MainMenu::GetMenuPick()
 {
 
+    std::cout << "Enter 'A' to add two binary numbers," << std::endl;
     std::cout << "Enter 'B' to convert from bianry to decimal," << std::endl;
     std::cout << "Enter 'C' to convert from decimal to binary," << std::endl;
-    std::cout << "Enter 'A' to add two binary numbers together," << std::endl;
+    std::cout << "Enter 'S' to subtract two binary numbers," << std::endl;
     std::cout << "Enter 'Q' to quit the program." << std::endl;
     std::cout << "\nPlease enter a character to perform an operation: ";
     std::cin >> userChoice;
@@ -93,6 +94,11 @@ void MainMenu::MenuFunctions(char entry)
             break;
         case 'C':
             menubinaryConvert();
+            clearMenu();
+            run();
+            break;
+        case 'S':
+            menusubNumbers();
             clearMenu();
             run();
             break;
@@ -165,7 +171,13 @@ void MainMenu::menuaddNumbers()
     
     std::cout << "The result of " << num1 << " + " << num2;
     std::cout << " is " << binResult << "." << std::endl;
+}
+void MainMenu::menusubNumbers()
+{
+    std::string binnumberOne;
+    std::string binnumberTwo;
     
-    
-    
+    std::cout << "Please enter two binary numbers to be subtracted: ";
+    std::cin >> binnumberOne;
+    std::cin >> binnumberTwo;
 }
