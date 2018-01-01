@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1514702096 source:c:\users\mogrent\documents\github\binary-converter\source\conversion.cpp
+1514848243 source:c:\users\mogrent\documents\github\binary-converter\source\conversion.cpp
 	<string>
 	<iostream>
 	<math.h>
+	<vector>
 	"Conversion.h"
 
 1514620176 c:\users\mogrent\documents\github\binary-converter\source\conversion.h

@@ -9,6 +9,7 @@
 #include <string>
 #include <iostream>
 #include <math.h>
+#include <vector>
 #include "Conversion.h"
 
 Conversion::Conversion()
@@ -100,14 +101,14 @@ int Conversion::ConvertFromBinary(std::string num)
  */
 std::string Conversion::ConvertFromDecimal(int baseTenNumber)
 {
-    int binaryNumber[100];
+    std::vector <int> binaryNumber;
     std::string binaryString;
     int i = 0;
     while(baseTenNumber > 0)
     {
-        binaryNumber[i] = baseTenNumber % 2;
-        i++;
+        binaryNumber.push_back(baseTenNumber % 2);
         baseTenNumber = baseTenNumber/2;
+        i++;
     }
 
     for(int j = i-1; j >= 0; j--)
