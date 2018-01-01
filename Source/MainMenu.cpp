@@ -156,6 +156,16 @@ void MainMenu::menuaddNumbers()
     std::cin >> binnumberOne;
     std::cin >> binnumberTwo;
     
+    int num1 = ConvertFromBinary(binnumberOne);
+    int num2 = ConvertFromBinary(binnumberTwo);
+    
+    int result = num1 + num2;
+    
+    std::string binResult = ConvertFromDecimal(result);
+    
+    std::cout << "The result of " << num1 << " + " << num2;
+    std::cout << " is " << binResult << "." << std::endl;
+    
     
     
 }
