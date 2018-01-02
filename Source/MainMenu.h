@@ -29,9 +29,14 @@ public:
     ~MainMenu();
 
 private:
-    int num;
-    std::string binNum;
     char userChoice;
+    std::string binnumberOne;
+    std::string binnumberTwo;
+    std::string binResult;
+    int userenternum1;
+    int userenternum2;
+    int intResult;
+    
 
 };
 

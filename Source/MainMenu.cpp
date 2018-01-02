@@ -12,9 +12,13 @@
 MainMenu::MainMenu()
 {
 
-    binNum = "1111111";
-    num = 255;
     userChoice = 'X';
+    intResult = 0;
+    userenternum1 = 0;
+    userenternum2 = 0;
+    binResult = "11111111";
+    binnumberOne = "11111111";
+    binnumberTwo = "11111111";
 
 }
 /*
@@ -132,9 +136,9 @@ void MainMenu::MenuFunctions(char entry)
 void MainMenu::menubinaryConvert()
 {
     std::cout << "\nEnter a decimal Number to convert: ";
-    std::cin >> num;
-    binNum = ConvertFromDecimal(num);
-    std::cout << "\nThe decimal number: " << num << " is: " << binNum << " in binary form." << std::endl;
+    std::cin >> userenternum1;
+    binnumberOne = ConvertFromDecimal(userenternum1);
+    std::cout << "\nThe decimal number: " << userenternum1 << " is: " << binnumberOne << " in binary form." << std::endl;
 }
 /*
  * Function menudecimalConvert
@@ -146,9 +150,9 @@ void MainMenu::menubinaryConvert()
 void MainMenu::menudecimalConvert()
 {
     std::cout << "\nPlease enter a binary Number to convert: ";
-    std::cin >> binNum;
-    num = ConvertFromBinary(binNum);
-    std::cout << "\nThe binary number: "<< binNum <<" is: "<< num << " in decimal form." << std::endl;
+    std::cin >> binnumberOne;
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    std::cout << "\nThe binary number: "<< binnumberOne <<" is: "<< userenternum1 << " in decimal form." << std::endl;
 }
 /*
  * Function menuQuit()
@@ -171,21 +175,20 @@ int MainMenu::menuQuit()
  */
 void MainMenu::menuaddNumbers()
 {
-    std::string binnumberOne;
-    std::string binnumberTwo;
 
     std::cout << "Please enter two binary numbers to be added together: ";
     std::cin >> binnumberOne;
     std::cin >> binnumberTwo;
+    
 
-    int num1 = ConvertFromBinary(binnumberOne);
-    int num2 = ConvertFromBinary(binnumberTwo);
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    userenternum2 = ConvertFromBinary(binnumberTwo);
 
-    int result = num1 + num2;
+    intResult = userenternum1 + userenternum2;
 
-    std::string binResult = ConvertFromDecimal(result);
+    std::string binResult = ConvertFromDecimal(intResult);
 
-    std::cout << "The result of " << num1 << " + " << num2;
+    std::cout << "The result of " << userenternum1 << " + " << userenternum2;
     std::cout << " is " << binResult << "." << std::endl;
 }
 /*
@@ -199,26 +202,24 @@ void MainMenu::menuaddNumbers()
  */
 void MainMenu::menusubNumbers()
 {
-    std::string binnumberOne;
-    std::string binnumberTwo;
 
     std::cout << "Please enter two binary numbers to be subtracted: ";
     std::cin >> binnumberOne;
     std::cin >> binnumberTwo;
 
-    int num1 = ConvertFromBinary(binnumberOne);
-    int num2 = ConvertFromBinary(binnumberTwo);
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    userenternum2 = ConvertFromBinary(binnumberTwo);
 
-    int result = num1 - num2;
+    intResult = userenternum1 - userenternum2;
 
-    if (result < 0)
+    if (intResult < 0)
     {
         std::cout << "result of two numbers subtracted is negative, please try again" <<  std::endl;
         menusubNumbers();
     }
-        std::string binResult = ConvertFromDecimal(result);
+    binResult = ConvertFromDecimal(intResult);
 
-    std::cout << "The result of " << num1 << " - " << num2;
+    std::cout << "The result of " << userenternum1 << " - " << userenternum2;
     std::cout << " is " << binResult << "." << std::endl;
 }
 /*
