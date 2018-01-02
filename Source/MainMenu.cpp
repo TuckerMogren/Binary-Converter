@@ -58,6 +58,8 @@ char MainMenu::GetMenuPick()
     std::cout << "Enter 'A' to add two binary numbers," << std::endl;
     std::cout << "Enter 'B' to convert from bianry to decimal," << std::endl;
     std::cout << "Enter 'C' to convert from decimal to binary," << std::endl;
+    std::cout << "Enter 'D' to divide two binary numbers," << std::endl;
+    std::cout << "Enter 'M' to multiple two binary numbers," << std::endl;
     std::cout << "Enter 'S' to subtract two binary numbers," << std::endl;
     std::cout << "Enter 'Q' to quit the program." << std::endl;
     std::cout << "\nPlease enter a character to perform an operation: ";
@@ -204,4 +206,31 @@ void MainMenu::menusubNumbers()
 
     std::cout << "The result of " << num1 << " - " << num2;
     std::cout << " is " << binResult << "." << std::endl;
+}
+/*
+ * Function menudivideNumber()
+ * Returns and takes nothing
+ * Will ask for two binary numbers
+ * Convert then to decimal numbers
+ * Divide the two numbers, truncating the results
+ * Then converting the result to a binary number
+ * And displaying it to the user.
+ */
+void MainMenu::menudivideNumber()
+{
+    
+    
+}
+/*
+ * Function menudivideNumber()
+ * Returns and takes nothing
+ * Will ask for two binary numbers
+ * Convert then to decimal numbers
+ * Divide the two numbers, truncating the results
+ * Then converting the result to a binary number
+ * And displaying it to the user.
+ */
+void MainMenu::menumultipleNumber()
+{
+    
 }

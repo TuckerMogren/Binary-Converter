@@ -18,6 +18,8 @@ private:
     void menudecimalConvert();
     void menuaddNumbers();
     void menusubNumbers();
+    void menudivideNumber();
+    void menumultipleNumber();
     int menuQuit();
     void clearMenu();
 public:
