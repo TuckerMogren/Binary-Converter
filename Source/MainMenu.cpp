@@ -61,6 +61,7 @@ char MainMenu::GetMenuPick()
     std::cout << "Enter 'D' to divide two binary numbers," << std::endl;
     std::cout << "Enter 'M' to multiple two binary numbers," << std::endl;
     std::cout << "Enter 'S' to subtract two binary numbers," << std::endl;
+    std::cout << "Enter '%' to find the remainder between two binary numbers," << std::endl;
     std::cout << "Enter 'Q' to quit the program." << std::endl;
     std::cout << "\nPlease enter a character to perform an operation: ";
     std::cin >> userChoice;
@@ -104,6 +105,19 @@ void MainMenu::MenuFunctions(char entry)
             clearMenu();
             run();
             break;
+        case 'M':
+            menumultipleNumber();
+            clearMenu();
+            run();
+            break;
+        case 'D':
+            menudivideNumber();
+            clearMenu();
+            run();
+        case '%':
+            menumodNumber();
+            clearMenu();
+            run();
         case 'Q':
             menuQuit();
             break;
@@ -231,6 +245,19 @@ void MainMenu::menudivideNumber()
  * And displaying it to the user.
  */
 void MainMenu::menumultipleNumber()
+{
+    
+}
+/*
+ * Function menumodNumber()
+ * Returns and takes nothing
+ * Will ask for two binary numbers
+ * Convert then to decimal numbers
+ * mod the two numbers, to find the reminder
+ * Then converting the result to a binary number
+ * And displaying it to the user.
+ */
+void MainMenu::menumodNumber()
 {
     
 }

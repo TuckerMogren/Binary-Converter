@@ -20,6 +20,7 @@ private:
     void menusubNumbers();
     void menudivideNumber();
     void menumultipleNumber();
+    void menumodNumber();
     int menuQuit();
     void clearMenu();
 public:
