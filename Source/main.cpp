@@ -3,6 +3,7 @@
 * Included Conversions.h for the conversions class
 */
 #include <iostream>
+#include <exception>
 #include "MainMenu.h"
 /*
 * Main Function
@@ -12,7 +13,18 @@
 */
 int main()
 {
-    MainMenu *mainmenu = new MainMenu();
+    MainMenu *mainmenu = nullptr;
+    
+    
+    try
+    {
+        mainmenu = new MainMenu();
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << "ERROR: could not construct mainmenu class!" << e.what() << std::endl;
+    }
+    
     mainmenu->run();
     delete mainmenu;
     return 0;

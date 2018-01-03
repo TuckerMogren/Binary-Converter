@@ -233,7 +233,24 @@ void MainMenu::menusubNumbers()
  */
 void MainMenu::menudivideNumber()
 {
+    std::cout << "Please enter two binary numbers to divide: ";
+    std::cin >> binnumberOne;
+    std::cin >> binnumberTwo;
     
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    userenternum2 = ConvertFromBinary(binnumberTwo);
+    
+    
+    if (userenternum2 == 0)
+    {
+        std::cerr << "ERROR: Cannot divide by zero {0}" <<  std::endl;
+        menudivideNumber();
+    }
+    intResult = userenternum1 / userenternum2;
+    binResult = ConvertFromDecimal(intResult);
+    
+    std::cout << "The result of " << userenternum1 << " / " << userenternum2;
+    std::cout << " is " << binResult << "." << std::endl;
     
 }
 /*
