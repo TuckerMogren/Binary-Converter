@@ -65,7 +65,7 @@ void MenuOperations::menudecimalConvert()
 void MenuOperations::menuaddNumbers()
 {
 
-    std::cout << "Please enter two binary numbers to be added together: ";
+    std::cout << "Please enter two binary numbers to be added together." <<  std::endl;
     std::cout << "First binary number: ";
     std::cin >> binnumberOne;
     std::cout << "Second binary number: ";
@@ -80,7 +80,7 @@ void MenuOperations::menuaddNumbers()
     std::string binResult = ConvertFromDecimal(intResult);
 
     std::cout << "The result of " << userenternum1 << " + " << userenternum2;
-    std::cout << " is " << binResult << "." << std::endl;
+    std::cout << " is " << binResult << "in binary." << std::endl;
 }
 /*
  * Function menusubNumbers()
@@ -94,7 +94,7 @@ void MenuOperations::menuaddNumbers()
 void MenuOperations::menusubNumbers()
 {
 
-    std::cout << "Please enter two binary numbers to be subtracted: ";
+    std::cout << "Please enter two binary numbers to be subtracted." <<  std::endl;
     std::cout << "First binary number: ";
     std::cin >> binnumberOne;
     std::cout << "Second binary number: ";
@@ -113,7 +113,7 @@ void MenuOperations::menusubNumbers()
     binResult = ConvertFromDecimal(intResult);
 
     std::cout << "The result of " << userenternum1 << " - " << userenternum2;
-    std::cout << " is " << binResult << "." << std::endl;
+    std::cout << " is " << binResult << "in binary." << std::endl;
 }
 /*
  * Function menudivideNumber()
@@ -126,7 +126,7 @@ void MenuOperations::menusubNumbers()
  */
 void MenuOperations::menudivideNumber()
 {
-    std::cout << "Please enter two binary numbers to divide: ";
+    std::cout << "Please enter two binary numbers to divide." <<  std::endl;
     std::cout << "First binary number: ";
     std::cin >> binnumberOne;
     std::cout << "Second binary number: ";
@@ -145,7 +145,7 @@ void MenuOperations::menudivideNumber()
     binResult = ConvertFromDecimal(intResult);
 
     std::cout << "The result of " << userenternum1 << " / " << userenternum2;
-    std::cout << " is " << binResult << "." << std::endl;
+    std::cout << " is " << binResult << "in binary." << std::endl;
 
 }
 /*
@@ -159,6 +159,21 @@ void MenuOperations::menudivideNumber()
  */
 void MenuOperations::menumultipleNumber()
 {
+    std::cout << "Please enter two binary numbers to multiple." <<  std::endl;
+    std::cout << "First binary number: ";
+    std::cin >> binnumberOne;
+    std::cout << "Second binary number: ";
+    std::cin >> binnumberTwo;
+    
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    userenternum2 = ConvertFromBinary(binnumberTwo);
+    
+
+    intResult = (userenternum1 * userenternum2);
+    binResult = ConvertFromDecimal(intResult);
+    
+    std::cout << "The result of " << userenternum1 << " * " << userenternum2;
+    std::cout << " is " << binResult << " in binary." << std::endl;
 
 }
 /*
@@ -172,5 +187,24 @@ void MenuOperations::menumultipleNumber()
  */
 void MenuOperations::menumodNumber()
 {
-
+    std::cout << "Please enter two binary numbers find the remainder of." << std::endl;
+    std::cout << "First binary number: ";
+    std::cin >> binnumberOne;
+    std::cout << "Second binary number: ";
+    std::cin >> binnumberTwo;
+    
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    userenternum2 = ConvertFromBinary(binnumberTwo);
+    
+    
+    intResult = (userenternum1 % userenternum2);
+    binResult = ConvertFromDecimal(intResult);
+    
+    if(intResult == 0) // due issues with the ConverFromDecimal function if the decimal number is zero.
+    {
+        binResult = "00000000";
+    }
+    
+    std::cout << "The result of " << userenternum1 << " % " << userenternum2;
+    std::cout << " is " << binResult << " in binary." << std::endl;
 }

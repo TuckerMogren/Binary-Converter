@@ -25,8 +25,6 @@ public:
 private:
     char userChoice;
 
-
-
 };
 
 #endif  /*MainMenu_h*/

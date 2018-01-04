@@ -104,6 +104,14 @@ std::string Conversion::ConvertFromDecimal(int baseTenNumber)
     std::vector <int> binaryNumber;
     std::string binaryString;
     int i = 0;
+    if (baseTenNumber < 0) {
+        std::cerr << "ERROR: decimal number MUST be positive!" << std::endl;
+        binaryString = "ERROR: NEGITVE NUMBER WAS ENTERED.";
+    }
+    else if(baseTenNumber == 0)
+    {
+        binaryString = "0000";
+    }
     while(baseTenNumber > 0)
     {
         binaryNumber.push_back(baseTenNumber % 2);
