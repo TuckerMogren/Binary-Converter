@@ -36,13 +36,13 @@
 		</Compiler>
 		<Unit filename="../../Source/Conversion.cpp" />
 		<Unit filename="../../Source/Conversion.h" />
+		<Unit filename="../../Source/FileIO.cpp" />
+		<Unit filename="../../Source/FileIO.h" />
 		<Unit filename="../../Source/MainMenu.cpp" />
 		<Unit filename="../../Source/MainMenu.h" />
 		<Unit filename="../../Source/MenuOperations.cpp" />
 		<Unit filename="../../Source/MenuOperations.h" />
 		<Unit filename="../../Source/main.cpp" />
-		<Unit filename="../../include/FileIO.h" />
-		<Unit filename="../../src/FileIO.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
