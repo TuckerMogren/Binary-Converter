@@ -1,24 +1,35 @@
 # depslib dependency file v1.0
-1514849046 source:c:\users\mogrent\documents\github\binary-converter\source\conversion.cpp
+1514849275 source:c:\users\mogrent\documents\github\binary-converter\source\conversion.cpp
 	<string>
 	<iostream>
 	<math.h>
 	<vector>
-	<limits.h>
 	"Conversion.h"
 
-1514620176 c:\users\mogrent\documents\github\binary-converter\source\conversion.h
+1515033317 c:\users\mogrent\documents\github\binary-converter\source\conversion.h
 	<string>
 
-1514702151 source:c:\users\mogrent\documents\github\binary-converter\source\main.cpp
+1515033335 source:c:\users\mogrent\documents\github\binary-converter\source\main.cpp
 	<iostream>
+	<exception>
 	"MainMenu.h"
 
-1514846709 source:c:\users\mogrent\documents\github\binary-converter\source\mainmenu.cpp
+1515033317 source:c:\users\mogrent\documents\github\binary-converter\source\mainmenu.cpp
 	"MainMenu.h"
+	"Operations.h"
 	<string>
+	<iostream>
 
-1514845132 c:\users\mogrent\documents\github\binary-converter\source\mainmenu.h
+1515033317 c:\users\mogrent\documents\github\binary-converter\source\mainmenu.h
+	"Operations.h"
+
+1515033317 c:\users\mogrent\documents\github\binary-converter\source\operations.h
+	<string>
 	"Conversion.h"
+
+1515033346 source:c:\users\mogrent\documents\github\binary-converter\source\operations.cpp
 	<iostream>
+	<string>
+	"Operations.h"
+	"Conversion.h"
 

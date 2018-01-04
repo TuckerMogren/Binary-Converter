@@ -6,6 +6,7 @@
 #include "MainMenu.h"
 #include "Operations.h"
 #include <string>
+#include <iostream>
 /*
 * Class Constructor
 * Inits the binNum, num, and userChoice vars

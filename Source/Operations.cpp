@@ -4,12 +4,14 @@
  * For the mainmenu
  */
 #include <iostream>
+#include <string>
 #include "Operations.h"
+#include "Conversion.h"
 
 /*
  * Class Constructor
  */
-Operations::Operations
+Operations::Operations()
 {
     intResult = 0;
     userenternum1 = 0;
@@ -21,9 +23,9 @@ Operations::Operations
 /*
  * Class Deconstructor
  */
-Operations::~Operations
+Operations::~Operations()
 {
-    
+
 }
 /*
  * Function menubinaryConvert
@@ -49,7 +51,7 @@ void Operations::menudecimalConvert()
 {
     std::cout << "\nPlease enter a binary Number to convert: ";
     std::cin >> binnumberOne;
-    userenternum1 = ConversioConvertFromBinary(binnumberOne);
+    userenternum1 = ConvertFromBinary(binnumberOne);
     std::cout << "\nThe binary number: "<< binnumberOne <<" is: "<< userenternum1 << " in decimal form." << std::endl;
 }
 /*
@@ -62,19 +64,19 @@ void Operations::menudecimalConvert()
  */
 void Operations::menuaddNumbers()
 {
-    
+
     std::cout << "Please enter two binary numbers to be added together: ";
     std::cin >> binnumberOne;
     std::cin >> binnumberTwo;
-    
-    
+
+
     userenternum1 = ConvertFromBinary(binnumberOne);
     userenternum2 = ConvertFromBinary(binnumberTwo);
-    
+
     intResult = userenternum1 + userenternum2;
-    
+
     std::string binResult = ConvertFromDecimal(intResult);
-    
+
     std::cout << "The result of " << userenternum1 << " + " << userenternum2;
     std::cout << " is " << binResult << "." << std::endl;
 }
@@ -89,23 +91,23 @@ void Operations::menuaddNumbers()
  */
 void Operations::menusubNumbers()
 {
-    
+
     std::cout << "Please enter two binary numbers to be subtracted: ";
     std::cin >> binnumberOne;
     std::cin >> binnumberTwo;
-    
+
     userenternum1 = ConvertFromBinary(binnumberOne);
     userenternum2 = ConvertFromBinary(binnumberTwo);
-    
+
     intResult = userenternum1 - userenternum2;
-    
+
     if (intResult < 0)
     {
         std::cout << "result of two numbers subtracted is negative, please try again" <<  std::endl;
         menusubNumbers();
     }
     binResult = ConvertFromDecimal(intResult);
-    
+
     std::cout << "The result of " << userenternum1 << " - " << userenternum2;
     std::cout << " is " << binResult << "." << std::endl;
 }
@@ -123,11 +125,11 @@ void Operations::menudivideNumber()
     std::cout << "Please enter two binary numbers to divide: ";
     std::cin >> binnumberOne;
     std::cin >> binnumberTwo;
-    
+
     userenternum1 = ConvertFromBinary(binnumberOne);
     userenternum2 = ConvertFromBinary(binnumberTwo);
-    
-    
+
+
     if (userenternum2 == 0)
     {
         std::cerr << "ERROR: Cannot divide by zero {0}" <<  std::endl;
@@ -135,10 +137,10 @@ void Operations::menudivideNumber()
     }
     intResult = userenternum1 / userenternum2;
     binResult = ConvertFromDecimal(intResult);
-    
+
     std::cout << "The result of " << userenternum1 << " / " << userenternum2;
     std::cout << " is " << binResult << "." << std::endl;
-    
+
 }
 /*
  * Function menudivideNumber()
@@ -151,7 +153,7 @@ void Operations::menudivideNumber()
  */
 void Operations::menumultipleNumber()
 {
-    
+
 }
 /*
  * Function menumodNumber()
@@ -164,5 +166,5 @@ void Operations::menumultipleNumber()
  */
 void Operations::menumodNumber()
 {
-    
+
 }

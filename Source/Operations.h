@@ -6,9 +6,9 @@
 #ifndef Operations_h
 #define Operations_h
 
-
+#include <string>
 #include "Conversion.h"
-#include <iostream>
+
 
 class Operations : protected Conversion
 {
@@ -31,7 +31,7 @@ private:
     int userenternum1;
     int userenternum2;
     int intResult;
-    
+
 
 
 };

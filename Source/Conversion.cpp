@@ -44,7 +44,6 @@ bool Conversion::ValidBin(std::string num)
     }
     if(isEightBits)
     {
-        std::cout << "The number is an 8-bit Binary Number" << std::endl;
         std::cout << "The number is an Binary Number" << std::endl;
     }
     if(!isEightBits)

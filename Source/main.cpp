@@ -13,10 +13,9 @@
 */
 int main()
 {
-    /*
     MainMenu *mainmenu = nullptr;
-    
-    
+
+
     try
     {
         mainmenu = new MainMenu();
@@ -25,10 +24,9 @@ int main()
     {
         std::cerr << "ERROR: could not construct mainmenu class!" << e.what() << std::endl;
     }
-    
+
     mainmenu->run();
     delete mainmenu;
-     */
     return 0;
 }
 

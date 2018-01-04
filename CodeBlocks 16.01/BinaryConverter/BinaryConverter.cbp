@@ -36,6 +36,8 @@
 		<Unit filename="../../Source/Conversion.h" />
 		<Unit filename="../../Source/MainMenu.cpp" />
 		<Unit filename="../../Source/MainMenu.h" />
+		<Unit filename="../../Source/Operations.cpp" />
+		<Unit filename="../../Source/Operations.h" />
 		<Unit filename="../../Source/main.cpp" />
 		<Extensions>
 			<code_completion />

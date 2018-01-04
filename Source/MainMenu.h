@@ -6,9 +6,9 @@
 
 #ifndef MainMenu_h
 #define MainMenu_h
+
+
 #include "Operations.h"
-#include "Conversion.h"
-#include <iostream>
 
 class MainMenu : protected Operations
 {
@@ -25,7 +25,7 @@ public:
 private:
     char userChoice;
 
-    
+
 
 };
 
