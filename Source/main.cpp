@@ -13,6 +13,7 @@
 */
 int main()
 {
+    /*
     MainMenu *mainmenu = nullptr;
     
     
@@ -27,6 +28,7 @@ int main()
     
     mainmenu->run();
     delete mainmenu;
+     */
     return 0;
 }
 

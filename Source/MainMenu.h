@@ -6,21 +6,15 @@
 
 #ifndef MainMenu_h
 #define MainMenu_h
+#include "Operations.h"
 #include "Conversion.h"
 #include <iostream>
 
-class MainMenu : protected Conversion
+class MainMenu : protected Operations
 {
-private:
+protected:
     char GetMenuPick();
     void MenuFunctions(char);
-    void menubinaryConvert();
-    void menudecimalConvert();
-    void menuaddNumbers();
-    void menusubNumbers();
-    void menudivideNumber();
-    void menumultipleNumber();
-    void menumodNumber();
     int menuQuit();
     void clearMenu();
 public:
@@ -30,12 +24,7 @@ public:
 
 private:
     char userChoice;
-    std::string binnumberOne;
-    std::string binnumberTwo;
-    std::string binResult;
-    int userenternum1;
-    int userenternum2;
-    int intResult;
+
     
 
 };

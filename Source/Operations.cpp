@@ -3,4 +3,166 @@
  * Class  will hold the numerical operations
  * For the mainmenu
  */
-#include "Operations.hpp"
+#include <iostream>
+#include "Operations.h"
+
+/*
+ * Class Constructor
+ */
+Operations::Operations
+{
+    intResult = 0;
+    userenternum1 = 0;
+    userenternum2 = 0;
+    binResult = "11111111";
+    binnumberOne = "11111111";
+    binnumberTwo = "11111111";
+}
+/*
+ * Class Deconstructor
+ */
+Operations::~Operations
+{
+    
+}
+/*
+ * Function menubinaryConvert
+ * Takes nothing, returns nothing
+ * Will ask for a decimal number and will return
+ * The string equivalent in binary form and display it.
+ */
+void Operations::menubinaryConvert()
+{
+    std::cout << "\nEnter a decimal Number to convert: ";
+    std::cin >> userenternum1;
+    binnumberOne = ConvertFromDecimal(userenternum1);
+    std::cout << "\nThe decimal number: " << userenternum1 << " is: " << binnumberOne << " in binary form." << std::endl;
+}
+/*
+ * Function menudecimalConvert
+ * Takes nothing, returns nothing
+ * Will ask for a binary string and
+ * will convert the string to
+ * Its decimal number equivalent and display the value.
+ */
+void Operations::menudecimalConvert()
+{
+    std::cout << "\nPlease enter a binary Number to convert: ";
+    std::cin >> binnumberOne;
+    userenternum1 = ConversioConvertFromBinary(binnumberOne);
+    std::cout << "\nThe binary number: "<< binnumberOne <<" is: "<< userenternum1 << " in decimal form." << std::endl;
+}
+/*
+ * Function menuaddNumbers()
+ * Takes nothing, returns nothing
+ * Will add two binary numbers together
+ * and then display the output (result).
+ * Will take the string, convert to dec
+ * Then add the dec nums together and convert that to bin.
+ */
+void Operations::menuaddNumbers()
+{
+    
+    std::cout << "Please enter two binary numbers to be added together: ";
+    std::cin >> binnumberOne;
+    std::cin >> binnumberTwo;
+    
+    
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    userenternum2 = ConvertFromBinary(binnumberTwo);
+    
+    intResult = userenternum1 + userenternum2;
+    
+    std::string binResult = ConvertFromDecimal(intResult);
+    
+    std::cout << "The result of " << userenternum1 << " + " << userenternum2;
+    std::cout << " is " << binResult << "." << std::endl;
+}
+/*
+ * Function menusubNumbers()
+ * Takes nothing, returns nothing
+ * Will subtract two binary numbers
+ * and then display the output (result).
+ * will take a string binary number
+ * Then will convert to decimal, subtract
+ * and convert the result back to binary and display
+ */
+void Operations::menusubNumbers()
+{
+    
+    std::cout << "Please enter two binary numbers to be subtracted: ";
+    std::cin >> binnumberOne;
+    std::cin >> binnumberTwo;
+    
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    userenternum2 = ConvertFromBinary(binnumberTwo);
+    
+    intResult = userenternum1 - userenternum2;
+    
+    if (intResult < 0)
+    {
+        std::cout << "result of two numbers subtracted is negative, please try again" <<  std::endl;
+        menusubNumbers();
+    }
+    binResult = ConvertFromDecimal(intResult);
+    
+    std::cout << "The result of " << userenternum1 << " - " << userenternum2;
+    std::cout << " is " << binResult << "." << std::endl;
+}
+/*
+ * Function menudivideNumber()
+ * Returns and takes nothing
+ * Will ask for two binary numbers
+ * Convert then to decimal numbers
+ * Divide the two numbers, truncating the results
+ * Then converting the result to a binary number
+ * And displaying it to the user.
+ */
+void Operations::menudivideNumber()
+{
+    std::cout << "Please enter two binary numbers to divide: ";
+    std::cin >> binnumberOne;
+    std::cin >> binnumberTwo;
+    
+    userenternum1 = ConvertFromBinary(binnumberOne);
+    userenternum2 = ConvertFromBinary(binnumberTwo);
+    
+    
+    if (userenternum2 == 0)
+    {
+        std::cerr << "ERROR: Cannot divide by zero {0}" <<  std::endl;
+        menudivideNumber();
+    }
+    intResult = userenternum1 / userenternum2;
+    binResult = ConvertFromDecimal(intResult);
+    
+    std::cout << "The result of " << userenternum1 << " / " << userenternum2;
+    std::cout << " is " << binResult << "." << std::endl;
+    
+}
+/*
+ * Function menudivideNumber()
+ * Returns and takes nothing
+ * Will ask for two binary numbers
+ * Convert then to decimal numbers
+ * Divide the two numbers, truncating the results
+ * Then converting the result to a binary number
+ * And displaying it to the user.
+ */
+void Operations::menumultipleNumber()
+{
+    
+}
+/*
+ * Function menumodNumber()
+ * Returns and takes nothing
+ * Will ask for two binary numbers
+ * Convert then to decimal numbers
+ * mod the two numbers, to find the reminder
+ * Then converting the result to a binary number
+ * And displaying it to the user.
+ */
+void Operations::menumodNumber()
+{
+    
+}

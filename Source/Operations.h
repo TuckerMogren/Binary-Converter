@@ -3,9 +3,37 @@
  * Class header will hold the numerical operations
  * For the mainmenu
  */
-#ifndef Operations_hpp
-#define Operations_hpp
+#ifndef Operations_h
+#define Operations_h
 
-#include <stdio.h>
 
-#endif /* Operations_hpp */
+#include "Conversion.h"
+#include <iostream>
+
+class Operations : protected Conversion
+{
+public:
+    Operations();
+    ~Operations();
+protected:
+    void menubinaryConvert();
+    void menudecimalConvert();
+    void menuaddNumbers();
+    void menusubNumbers();
+    void menudivideNumber();
+    void menumultipleNumber();
+    void menumodNumber();
+
+private:
+    std::string binnumberOne;
+    std::string binnumberTwo;
+    std::string binResult;
+    int userenternum1;
+    int userenternum2;
+    int intResult;
+    
+
+
+};
+
+#endif

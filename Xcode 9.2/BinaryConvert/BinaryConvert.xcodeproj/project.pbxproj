@@ -25,9 +25,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F35779D1FFDBFC6000742E4 /* Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Operations.h; path = ../../../Source/Operations.h; sourceTree = "<group>"; };
 		3F5F49391FF59FD400062DC3 /* MainMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MainMenu.cpp; path = ../../../Source/MainMenu.cpp; sourceTree = "<group>"; };
 		3F8AE10C1FFDBE74007229B1 /* Operations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Operations.cpp; path = ../../../Source/Operations.cpp; sourceTree = "<group>"; };
-		3F8AE10D1FFDBE74007229B1 /* Operations.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Operations.hpp; path = ../../../Source/Operations.hpp; sourceTree = "<group>"; };
 		3F944DFC1FF8502800AA44B2 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenu.h; path = ../../../Source/MainMenu.h; sourceTree = "<group>"; };
 		3F96FB451FF3F3F400B92589 /* Conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Conversion.h; path = ../../../Source/Conversion.h; sourceTree = "<group>"; };
 		3F96FB461FF3F7BB00B92589 /* Conversion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion.cpp; path = ../../../Source/Conversion.cpp; sourceTree = "<group>"; };
@@ -65,11 +65,11 @@
 		3FD4F2B31FE6F64700E69635 /* BinaryConvert */ = {
 			isa = PBXGroup;
 			children = (
+				3F35779D1FFDBFC6000742E4 /* Operations.h */,
 				3F944DFC1FF8502800AA44B2 /* MainMenu.h */,
 				3FD4F2BB1FE6F67A00E69635 /* main.cpp */,
 				3F96FB461FF3F7BB00B92589 /* Conversion.cpp */,
 				3F8AE10C1FFDBE74007229B1 /* Operations.cpp */,
-				3F8AE10D1FFDBE74007229B1 /* Operations.hpp */,
 				3F96FB451FF3F3F400B92589 /* Conversion.h */,
 				3F5F49391FF59FD400062DC3 /* MainMenu.cpp */,
 			);
