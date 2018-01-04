@@ -80,7 +80,7 @@ void MenuOperations::menuaddNumbers()
     std::string binResult = ConvertFromDecimal(intResult);
 
     std::cout << "The result of " << userenternum1 << " + " << userenternum2;
-    std::cout << " is " << binResult << "in binary." << std::endl;
+    std::cout << " is " << binResult << " in binary." << std::endl;
 }
 /*
  * Function menusubNumbers()
@@ -113,7 +113,7 @@ void MenuOperations::menusubNumbers()
     binResult = ConvertFromDecimal(intResult);
 
     std::cout << "The result of " << userenternum1 << " - " << userenternum2;
-    std::cout << " is " << binResult << "in binary." << std::endl;
+    std::cout << " is " << binResult << " in binary." << std::endl;
 }
 /*
  * Function menudivideNumber()
@@ -145,7 +145,7 @@ void MenuOperations::menudivideNumber()
     binResult = ConvertFromDecimal(intResult);
 
     std::cout << "The result of " << userenternum1 << " / " << userenternum2;
-    std::cout << " is " << binResult << "in binary." << std::endl;
+    std::cout << " is " << binResult << " in binary." << std::endl;
 
 }
 /*
@@ -164,14 +164,14 @@ void MenuOperations::menumultipleNumber()
     std::cin >> binnumberOne;
     std::cout << "Second binary number: ";
     std::cin >> binnumberTwo;
-    
+
     userenternum1 = ConvertFromBinary(binnumberOne);
     userenternum2 = ConvertFromBinary(binnumberTwo);
-    
+
 
     intResult = (userenternum1 * userenternum2);
     binResult = ConvertFromDecimal(intResult);
-    
+
     std::cout << "The result of " << userenternum1 << " * " << userenternum2;
     std::cout << " is " << binResult << " in binary." << std::endl;
 
@@ -192,19 +192,19 @@ void MenuOperations::menumodNumber()
     std::cin >> binnumberOne;
     std::cout << "Second binary number: ";
     std::cin >> binnumberTwo;
-    
+
     userenternum1 = ConvertFromBinary(binnumberOne);
     userenternum2 = ConvertFromBinary(binnumberTwo);
-    
-    
+
+
     intResult = (userenternum1 % userenternum2);
     binResult = ConvertFromDecimal(intResult);
-    
+
     if(intResult == 0) // due issues with the ConverFromDecimal function if the decimal number is zero.
     {
         binResult = "00000000";
     }
-    
+
     std::cout << "The result of " << userenternum1 << " % " << userenternum2;
     std::cout << " is " << binResult << " in binary." << std::endl;
 }

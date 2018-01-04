@@ -14,13 +14,13 @@
 	<exception>
 	"MainMenu.h"
 
-1515033317 source:c:\users\mogrent\documents\github\binary-converter\source\mainmenu.cpp
+1515034870 source:c:\users\mogrent\documents\github\binary-converter\source\mainmenu.cpp
 	"MainMenu.h"
-	"Operations.h"
+	"MenuOperations.h"
 	<string>
 	<iostream>
 
-1515034864 c:\users\mogrent\documents\github\binary-converter\source\mainmenu.h
+1515049752 c:\users\mogrent\documents\github\binary-converter\source\mainmenu.h
 	"MenuOperations.h"
 
 1515034247 c:\users\mogrent\documents\github\binary-converter\source\operations.h
