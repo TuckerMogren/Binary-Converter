@@ -20,10 +20,10 @@
 	<string>
 	<iostream>
 
-1515033317 c:\users\mogrent\documents\github\binary-converter\source\mainmenu.h
-	"Operations.h"
+1515034864 c:\users\mogrent\documents\github\binary-converter\source\mainmenu.h
+	"MenuOperations.h"
 
-1515033317 c:\users\mogrent\documents\github\binary-converter\source\operations.h
+1515034247 c:\users\mogrent\documents\github\binary-converter\source\operations.h
 	<string>
 	"Conversion.h"
 
@@ -31,5 +31,9 @@
 	<iostream>
 	<string>
 	"Operations.h"
+	"Conversion.h"
+
+1515034855 c:\users\mogrent\documents\github\binary-converter\source\menuoperations.h
+	<string>
 	"Conversion.h"
 

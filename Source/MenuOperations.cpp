@@ -5,13 +5,13 @@
  */
 #include <iostream>
 #include <string>
-#include "Operations.h"
+#include "MenuOperations.h"
 #include "Conversion.h"
 
 /*
  * Class Constructor
  */
-Operations::Operations()
+MenuOperations::MenuOperations()
 {
     intResult = 0;
     userenternum1 = 0;
@@ -23,7 +23,7 @@ Operations::Operations()
 /*
  * Class Deconstructor
  */
-Operations::~Operations()
+MenuOperations::~MenuOperations()
 {
 
 }
@@ -33,7 +33,7 @@ Operations::~Operations()
  * Will ask for a decimal number and will return
  * The string equivalent in binary form and display it.
  */
-void Operations::menubinaryConvert()
+void MenuOperations::menubinaryConvert()
 {
     std::cout << "\nEnter a decimal Number to convert: ";
     std::cin >> userenternum1;
@@ -47,7 +47,7 @@ void Operations::menubinaryConvert()
  * will convert the string to
  * Its decimal number equivalent and display the value.
  */
-void Operations::menudecimalConvert()
+void MenuOperations::menudecimalConvert()
 {
     std::cout << "\nPlease enter a binary Number to convert: ";
     std::cin >> binnumberOne;
@@ -62,11 +62,13 @@ void Operations::menudecimalConvert()
  * Will take the string, convert to dec
  * Then add the dec nums together and convert that to bin.
  */
-void Operations::menuaddNumbers()
+void MenuOperations::menuaddNumbers()
 {
 
     std::cout << "Please enter two binary numbers to be added together: ";
+    std::cout << "First binary number: ";
     std::cin >> binnumberOne;
+    std::cout << "Second binary number: ";
     std::cin >> binnumberTwo;
 
 
@@ -89,11 +91,13 @@ void Operations::menuaddNumbers()
  * Then will convert to decimal, subtract
  * and convert the result back to binary and display
  */
-void Operations::menusubNumbers()
+void MenuOperations::menusubNumbers()
 {
 
     std::cout << "Please enter two binary numbers to be subtracted: ";
+    std::cout << "First binary number: ";
     std::cin >> binnumberOne;
+    std::cout << "Second binary number: ";
     std::cin >> binnumberTwo;
 
     userenternum1 = ConvertFromBinary(binnumberOne);
@@ -120,10 +124,12 @@ void Operations::menusubNumbers()
  * Then converting the result to a binary number
  * And displaying it to the user.
  */
-void Operations::menudivideNumber()
+void MenuOperations::menudivideNumber()
 {
     std::cout << "Please enter two binary numbers to divide: ";
+    std::cout << "First binary number: ";
     std::cin >> binnumberOne;
+    std::cout << "Second binary number: ";
     std::cin >> binnumberTwo;
 
     userenternum1 = ConvertFromBinary(binnumberOne);
@@ -151,7 +157,7 @@ void Operations::menudivideNumber()
  * Then converting the result to a binary number
  * And displaying it to the user.
  */
-void Operations::menumultipleNumber()
+void MenuOperations::menumultipleNumber()
 {
 
 }
@@ -164,7 +170,7 @@ void Operations::menumultipleNumber()
  * Then converting the result to a binary number
  * And displaying it to the user.
  */
-void Operations::menumodNumber()
+void MenuOperations::menumodNumber()
 {
 
 }

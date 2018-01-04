@@ -8,9 +8,9 @@
 #define MainMenu_h
 
 
-#include "Operations.h"
+#include "MenuOperations.h"
 
-class MainMenu : protected Operations
+class MainMenu : protected MenuOperations
 {
 private:
     char GetMenuPick();

@@ -10,11 +10,11 @@
 #include "Conversion.h"
 
 
-class Operations : protected Conversion
+class MenuOperations : protected Conversion
 {
 public:
-    Operations();
-    ~Operations();
+    MenuOperations();
+    ~MenuOperations();
 protected:
     void menubinaryConvert();
     void menudecimalConvert();
@@ -25,7 +25,7 @@ protected:
     void menumodNumber();
 
 private:
-    
+
     std::string binnumberOne;
     std::string binnumberTwo;
     std::string binResult;
