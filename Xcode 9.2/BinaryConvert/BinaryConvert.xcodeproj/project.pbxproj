@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F2551311FFDCD72002CA6A0 /* Operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F25512C1FFDCD72002CA6A0 /* Operations.cpp */; };
 		3F2551321FFDCD72002CA6A0 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F25512D1FFDCD72002CA6A0 /* MainMenu.cpp */; };
 		3F2551331FFDCD72002CA6A0 /* Conversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F25512E1FFDCD72002CA6A0 /* Conversion.cpp */; };
 		3F2551341FFDCD72002CA6A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F25512F1FFDCD72002CA6A0 /* main.cpp */; };
+		3F2551371FFDD0E4002CA6A0 /* MenuOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F2551351FFDD0E4002CA6A0 /* MenuOperations.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,12 +27,12 @@
 
 /* Begin PBXFileReference section */
 		3F25512A1FFDCD72002CA6A0 /* Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conversion.h; path = ../../../Source/Conversion.h; sourceTree = "<group>"; };
-		3F25512B1FFDCD72002CA6A0 /* Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Operations.h; path = ../../../Source/Operations.h; sourceTree = "<group>"; };
-		3F25512C1FFDCD72002CA6A0 /* Operations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Operations.cpp; path = ../../../Source/Operations.cpp; sourceTree = "<group>"; };
 		3F25512D1FFDCD72002CA6A0 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainMenu.cpp; path = ../../../Source/MainMenu.cpp; sourceTree = "<group>"; };
 		3F25512E1FFDCD72002CA6A0 /* Conversion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion.cpp; path = ../../../Source/Conversion.cpp; sourceTree = "<group>"; };
 		3F25512F1FFDCD72002CA6A0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../Source/main.cpp; sourceTree = "<group>"; };
 		3F2551301FFDCD72002CA6A0 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenu.h; path = ../../../Source/MainMenu.h; sourceTree = "<group>"; };
+		3F2551351FFDD0E4002CA6A0 /* MenuOperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuOperations.cpp; path = ../../../Source/MenuOperations.cpp; sourceTree = "<group>"; };
+		3F2551361FFDD0E4002CA6A0 /* MenuOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuOperations.h; path = ../../../Source/MenuOperations.h; sourceTree = "<group>"; };
 		3FD4F2B11FE6F64700E69635 /* BinaryConvert */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryConvert; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,13 +66,13 @@
 		3FD4F2B31FE6F64700E69635 /* BinaryConvert */ = {
 			isa = PBXGroup;
 			children = (
+				3F2551351FFDD0E4002CA6A0 /* MenuOperations.cpp */,
+				3F2551361FFDD0E4002CA6A0 /* MenuOperations.h */,
 				3F25512E1FFDCD72002CA6A0 /* Conversion.cpp */,
 				3F25512A1FFDCD72002CA6A0 /* Conversion.h */,
 				3F25512F1FFDCD72002CA6A0 /* main.cpp */,
 				3F25512D1FFDCD72002CA6A0 /* MainMenu.cpp */,
 				3F2551301FFDCD72002CA6A0 /* MainMenu.h */,
-				3F25512C1FFDCD72002CA6A0 /* Operations.cpp */,
-				3F25512B1FFDCD72002CA6A0 /* Operations.h */,
 			);
 			path = BinaryConvert;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F2551311FFDCD72002CA6A0 /* Operations.cpp in Sources */,
+				3F2551371FFDD0E4002CA6A0 /* MenuOperations.cpp in Sources */,
 				3F2551331FFDCD72002CA6A0 /* Conversion.cpp in Sources */,
 				3F2551341FFDCD72002CA6A0 /* main.cpp in Sources */,
 				3F2551321FFDCD72002CA6A0 /* MainMenu.cpp in Sources */,
