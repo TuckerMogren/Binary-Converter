@@ -12,7 +12,7 @@
 
 class MainMenu : protected Operations
 {
-protected:
+private:
     char GetMenuPick();
     void MenuFunctions(char);
     int menuQuit();

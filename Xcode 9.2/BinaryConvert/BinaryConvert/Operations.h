@@ -25,6 +25,7 @@ protected:
     void menumodNumber();
 
 private:
+    
     std::string binnumberOne;
     std::string binnumberTwo;
     std::string binResult;
