@@ -1,16 +1,20 @@
 #ifndef FILEIO_H
 #define FILEIO_H
 
-
+#include <fstream>
 class FileIO
 {
     public:
-        FileIO();
+        FileIO(std::string fileString);
         ~FileIO();
 
-    protected:
-
     private:
+        void fileRead();
+        void fileWrite(std::string datatoFile);
+    private:
+      std::ofstream fileFile;
+      std::string datatoFile;
+      std::string datafromFile;
 };
 
 #endif // FILEIO_H

@@ -5,6 +5,7 @@
 #include <iostream>
 #include <exception>
 #include "MainMenu.h"
+#include "FileIO.h"
 /*
 * Main Function
 * Written by Tucker Mogren, 12/16/17
@@ -27,6 +28,13 @@ int main()
 
     mainmenu->run();
     delete mainmenu;
+
+    FileIO *file = nullptr;
+    file = new FileIO("C:\\Users\\Mogrent\\Documents\\GitHub\\Binary-Converter\\Source\\File.txt");
+
+
+
+    delete file;
     return 0;
 }
 
