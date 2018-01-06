@@ -14,27 +14,23 @@
 */
 int main()
 {
-    /*
-    MainMenu *mainmenu = nullptr;
 
+    MainMenu *mainmenu = nullptr;
+    FileIO *file = nullptr;
 
     try
     {
         mainmenu = new MainMenu();
+        file = new FileIO("File.txt");
     }
     catch (std::exception &e)
     {
-        std::cerr << "ERROR: could not construct mainmenu class!" << e.what() << std::endl;
+        std::cerr << "ERROR: could not construct objects!" << e.what() << std::endl;
     }
 
     mainmenu->run();
+
     delete mainmenu;
-*/
-
-
-    FileIO *file = nullptr;
-    file = new FileIO("File.txt");
-
     delete file;
     return 0;
 }
