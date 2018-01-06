@@ -12,14 +12,19 @@ class FileIO
     private:
         void openFile();
         void readFile();
-        void fileRead();
+        char filereadOperation();
+        std::string filereadbinOne();
+        std::string filereadbinTwo();
         void fileWrite(std::string datatoFile);
+    
     private:
         std::ifstream fileFile;
         std::string datatoFile;
         std::string datafromFile;
-        std::string fileCharater;
-        std::string filedatafinalLocation;
+        char fileOperation;
+        std::string binnumber1;
+        std::string binnumber2;
+    
 };
 
 #endif // FILEIO_H

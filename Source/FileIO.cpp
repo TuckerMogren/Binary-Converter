@@ -9,11 +9,25 @@
 FileIO::FileIO(std::string fileString)
 {
     fileFile.open(fileString);
-    datafromFile = "";
-    datatoFile = "";
-    fileCharater = "";
-    filedatafinalLocation = "";
-    fileRead();
+    
+    
+    datafromFile = "blah";
+    datatoFile = "blah";
+    fileOperation = 'X';
+    binnumber1 = "11111111";
+    binnumber2 = "11111111";
+    
+    
+    if(!fileFile.is_open())
+    {
+        std::cerr << "ERROR: Unable to open file" << std::endl;
+        exit(EXIT_FAILURE);
+        
+    }
+    else{
+        std::cout << "File was opened" << std::endl;
+    }
+
 }
 /*
 * Class destructor
@@ -23,31 +37,46 @@ FileIO::~FileIO()
     fileFile.close();
 }
 /*
-* Function fileRead
-* takes nothing, returns nothing.
-* Will read the data from a file
-* And display it to the console. (as of right now, will change)
+* Function filereadOperation()
+* takes nothing, returns char.
+* Will parse the file for the first charater
+* that will dicate the operation to be performed
 */
-void FileIO::fileRead()
+char FileIO::filereadOperation()
 {
 
-    if(!fileFile.is_open())
-    {
-        std::cerr << "ERROR: Unable to open file" << std::endl;
-        exit(EXIT_FAILURE);
-
-    }
-    else{
-        std::cout << "File was opened" << std::endl;
-    }
-
-    while( fileFile >> fileCharater)
-    {
-        filedatafinalLocation += fileCharater;
-        filedatafinalLocation += " ";
-    }
-
-    std::cout << filedatafinalLocation;
+    fileFile >> fileOperation;
+    
+    
+    return fileOperation;
+}
+/*
+ * Function filereadbinOne()
+ * takes nothing, returns char.
+ * Will parse the file for the first string that
+ * will be the first binary number to operate on
+ */
+std::string FileIO::filereadbinOne()
+{
+    
+    fileFile >> binnumber1;
+    
+    
+    return binnumber1;
+}
+/*
+ * Function filereadbinTwo()
+ * takes nothing, returns char.
+ * Will parse the file for the first string that
+ * will be the second binary number to operate on
+ */
+std::string FileIO::filereadbinTwo()
+{
+    
+    fileFile >> binnumber2;
+    
+    
+    return binnumber2;
 }
 
 /*
