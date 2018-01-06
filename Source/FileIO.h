@@ -12,9 +12,11 @@ class FileIO
         void fileRead();
         void fileWrite(std::string datatoFile);
     private:
-      std::ofstream fileFile;
-      std::string datatoFile;
-      std::string datafromFile;
+        std::fstream fileFile;
+        std::string datatoFile;
+        std::string datafromFile;
+        std::string fileCharater;
+        std::string filedatafinalLocation;
 };
 
 #endif // FILEIO_H

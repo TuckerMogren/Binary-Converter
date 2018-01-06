@@ -14,6 +14,7 @@
 */
 int main()
 {
+    /*
     MainMenu *mainmenu = nullptr;
 
 
@@ -28,11 +29,11 @@ int main()
 
     mainmenu->run();
     delete mainmenu;
+*/
+
 
     FileIO *file = nullptr;
-    file = new FileIO("C:\\Users\\Mogrent\\Documents\\GitHub\\Binary-Converter\\Source\\File.txt");
-
-
+    file = new FileIO("File.txt");
 
     delete file;
     return 0;

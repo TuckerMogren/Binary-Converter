@@ -9,7 +9,7 @@
 1515183907 c:\users\mogrent\documents\github\binary-converter\source\conversion.h
 	<string>
 
-1515183676 source:c:\users\mogrent\documents\github\binary-converter\source\main.cpp
+1515215693 source:c:\users\mogrent\documents\github\binary-converter\source\main.cpp
 	<iostream>
 	<exception>
 	"MainMenu.h"
@@ -44,9 +44,11 @@
 	"MenuOperations.h"
 	"Conversion.h"
 
-1515183818 source:c:\users\mogrent\documents\github\binary-converter\source\fileio.cpp
+1515218644 source:c:\users\mogrent\documents\github\binary-converter\source\fileio.cpp
 	"FileIO.h"
+	<iostream>
+	<cstdlib>
 
-1515183644 c:\users\mogrent\documents\github\binary-converter\source\fileio.h
+1515218644 c:\users\mogrent\documents\github\binary-converter\source\fileio.h
 	<fstream>
 
