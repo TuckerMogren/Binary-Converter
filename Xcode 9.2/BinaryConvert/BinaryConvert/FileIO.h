@@ -8,9 +8,10 @@ class FileIO
         FileIO();
         ~FileIO();
 
-    protected:
-
     private:
+    void openFile();
+    void readFile();
+    
 };
 
 #endif // FILEIO_H
