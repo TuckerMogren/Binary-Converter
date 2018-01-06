@@ -9,20 +9,20 @@
 FileIO::FileIO(std::string fileString)
 {
     fileFile.open(fileString);
-    
-    
+
+
     datafromFile = "blah";
     datatoFile = "blah";
     fileOperation = 'X';
     binnumber1 = "11111111";
     binnumber2 = "11111111";
-    
-    
+
+
     if(!fileFile.is_open())
     {
         std::cerr << "ERROR: Unable to open file" << std::endl;
         exit(EXIT_FAILURE);
-        
+
     }
     else{
         std::cout << "File was opened" << std::endl;
@@ -46,8 +46,8 @@ char FileIO::filereadOperation()
 {
 
     fileFile >> fileOperation;
-    
-    
+
+
     return fileOperation;
 }
 /*
@@ -58,10 +58,10 @@ char FileIO::filereadOperation()
  */
 std::string FileIO::filereadbinOne()
 {
-    
+
     fileFile >> binnumber1;
-    
-    
+
+
     return binnumber1;
 }
 /*
@@ -72,22 +72,11 @@ std::string FileIO::filereadbinOne()
  */
 std::string FileIO::filereadbinTwo()
 {
-    
+
     fileFile >> binnumber2;
-    
-    
+
+
     return binnumber2;
 }
 
-/*
-* Function fileWrite
-* Returns nothing, takes a string to be written to the file.
-* Will as the user for data to be written to the file
-* And then write the data to said file
-*/
-void FileIO::fileWrite(std::string datatoFile)
-{
-
-
-}
 

@@ -15,8 +15,7 @@ class FileIO
         char filereadOperation();
         std::string filereadbinOne();
         std::string filereadbinTwo();
-        void fileWrite(std::string datatoFile);
-    
+
     private:
         std::ifstream fileFile;
         std::string datatoFile;
@@ -24,7 +23,7 @@ class FileIO
         char fileOperation;
         std::string binnumber1;
         std::string binnumber2;
-    
+
 };
 
 #endif // FILEIO_H
