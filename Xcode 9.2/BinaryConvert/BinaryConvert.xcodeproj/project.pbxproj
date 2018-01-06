@@ -11,7 +11,7 @@
 		3F2551331FFDCD72002CA6A0 /* Conversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F25512E1FFDCD72002CA6A0 /* Conversion.cpp */; };
 		3F2551341FFDCD72002CA6A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F25512F1FFDCD72002CA6A0 /* main.cpp */; };
 		3F2551371FFDD0E4002CA6A0 /* MenuOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F2551351FFDD0E4002CA6A0 /* MenuOperations.cpp */; };
-		3FC1AD0F1FFEF0C200CAF15C /* FileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FC1AD0D1FFEF0C100CAF15C /* FileIO.cpp */; };
+		3FFB7B8120015A33000674B0 /* FileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB7B7F20015A33000674B0 /* FileIO.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,9 +34,9 @@
 		3F2551301FFDCD72002CA6A0 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenu.h; path = ../../../Source/MainMenu.h; sourceTree = "<group>"; };
 		3F2551351FFDD0E4002CA6A0 /* MenuOperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuOperations.cpp; path = ../../../Source/MenuOperations.cpp; sourceTree = "<group>"; };
 		3F2551361FFDD0E4002CA6A0 /* MenuOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuOperations.h; path = ../../../Source/MenuOperations.h; sourceTree = "<group>"; };
-		3FC1AD0D1FFEF0C100CAF15C /* FileIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileIO.cpp; sourceTree = "<group>"; };
-		3FC1AD0E1FFEF0C100CAF15C /* FileIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileIO.h; sourceTree = "<group>"; };
 		3FD4F2B11FE6F64700E69635 /* BinaryConvert */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryConvert; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FFB7B7F20015A33000674B0 /* FileIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileIO.cpp; path = ../../../Source/FileIO.cpp; sourceTree = "<group>"; };
+		3FFB7B8020015A33000674B0 /* FileIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileIO.h; path = ../../../Source/FileIO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +69,11 @@
 		3FD4F2B31FE6F64700E69635 /* BinaryConvert */ = {
 			isa = PBXGroup;
 			children = (
+				3FFB7B7F20015A33000674B0 /* FileIO.cpp */,
+				3FFB7B8020015A33000674B0 /* FileIO.h */,
 				3F2551351FFDD0E4002CA6A0 /* MenuOperations.cpp */,
 				3F2551361FFDD0E4002CA6A0 /* MenuOperations.h */,
 				3F25512E1FFDCD72002CA6A0 /* Conversion.cpp */,
-				3FC1AD0D1FFEF0C100CAF15C /* FileIO.cpp */,
-				3FC1AD0E1FFEF0C100CAF15C /* FileIO.h */,
 				3F25512A1FFDCD72002CA6A0 /* Conversion.h */,
 				3F25512F1FFDCD72002CA6A0 /* main.cpp */,
 				3F25512D1FFDCD72002CA6A0 /* MainMenu.cpp */,
@@ -139,11 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FC1AD0F1FFEF0C200CAF15C /* FileIO.cpp in Sources */,
 				3F2551371FFDD0E4002CA6A0 /* MenuOperations.cpp in Sources */,
 				3F2551331FFDCD72002CA6A0 /* Conversion.cpp in Sources */,
 				3F2551341FFDCD72002CA6A0 /* main.cpp in Sources */,
 				3F2551321FFDCD72002CA6A0 /* MainMenu.cpp in Sources */,
+				3FFB7B8120015A33000674B0 /* FileIO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

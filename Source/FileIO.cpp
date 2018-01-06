@@ -37,6 +37,9 @@ void FileIO::fileRead()
         exit(EXIT_FAILURE);
 
     }
+    else{
+        std::cout << "File was opened" << std::endl;
+    }
 
     while( fileFile >> fileCharater)
     {
@@ -46,6 +49,7 @@ void FileIO::fileRead()
 
     std::cout << filedatafinalLocation;
 }
+
 /*
 * Function fileWrite
 * Returns nothing, takes a string to be written to the file.
