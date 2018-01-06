@@ -1,18 +1,19 @@
 # depslib dependency file v1.0
-1514849275 source:c:\users\mogrent\documents\github\binary-converter\source\conversion.cpp
+1515183907 source:c:\users\mogrent\documents\github\binary-converter\source\conversion.cpp
 	<string>
 	<iostream>
 	<math.h>
 	<vector>
 	"Conversion.h"
 
-1515033317 c:\users\mogrent\documents\github\binary-converter\source\conversion.h
+1515183907 c:\users\mogrent\documents\github\binary-converter\source\conversion.h
 	<string>
 
-1515033335 source:c:\users\mogrent\documents\github\binary-converter\source\main.cpp
+1515215693 source:c:\users\mogrent\documents\github\binary-converter\source\main.cpp
 	<iostream>
 	<exception>
 	"MainMenu.h"
+	"FileIO.h"
 
 1515034870 source:c:\users\mogrent\documents\github\binary-converter\source\mainmenu.cpp
 	"MainMenu.h"
@@ -36,4 +37,18 @@
 1515034855 c:\users\mogrent\documents\github\binary-converter\source\menuoperations.h
 	<string>
 	"Conversion.h"
+
+1515049871 source:c:\users\mogrent\documents\github\binary-converter\source\menuoperations.cpp
+	<iostream>
+	<string>
+	"MenuOperations.h"
+	"Conversion.h"
+
+1515218644 source:c:\users\mogrent\documents\github\binary-converter\source\fileio.cpp
+	"FileIO.h"
+	<iostream>
+	<cstdlib>
+
+1515218644 c:\users\mogrent\documents\github\binary-converter\source\fileio.h
+	<fstream>
 

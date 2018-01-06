@@ -14,7 +14,6 @@ class Conversion
 {
 protected:
     bool ValidBin(std::string);
-    std::string GetBinary();
     int ConvertFromBinary(std::string);
     std::string ConvertFromDecimal(int);
 public:

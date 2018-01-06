@@ -11,12 +11,18 @@
 #include <math.h>
 #include <vector>
 #include "Conversion.h"
-
+/*
+* Class constructor
+* Inits the binNum, decNumber vars
+*/
 Conversion::Conversion()
 {
     binNumber = "11111111";
     decNumber = 255;
 }
+/*
+* Class destructor
+*/
 Conversion::~Conversion()
 {
 
@@ -51,28 +57,6 @@ bool Conversion::ValidBin(std::string num)
         std::cout << "The number is not Binary Number" << std::endl;
     }
     return isEightBits;
-}
-/*
- * Function GetBinary
- * Will get a Binary Number (string) from the user
- * And then will use the ValidBinary function to make sure
- * The entered number is valid
- * Enter a string, returns a string
- * Will recursively call GetBinary() if a 8-bit number is not entered
- */
-std::string Conversion::GetBinary ()
-{
-    std:: cout << "Please enter a binary Number: ";
-    std:: cin >> binNumber;
-    bool errorCheck;
-    errorCheck = ValidBin(binNumber);
-
-    if(!(errorCheck))
-    {
-        std::cout << "Please try again" << std::endl;
-        GetBinary();
-    }
-    return binNumber;
 }
 /*
  * Function ConvertFromBinary
