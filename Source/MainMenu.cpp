@@ -70,6 +70,10 @@ char MainMenu::GetMenuPick()
 
 
     userChoice = std::toupper(userChoice);
+    //Below array is for use maybe later
+    //char acceptedValues[9] = {'+','-','/','*','%','B','C','P','Q'};
+
+
 
     while (userChoice != '+' && userChoice != '-' && userChoice != '/' && userChoice != '*' && userChoice != '%'
            && userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
@@ -129,6 +133,8 @@ void MainMenu::MenuFunctions(char entry)
             run();
         case 'Q':
             menuQuit();
+            break;
+        default:
             break;
     }
 }

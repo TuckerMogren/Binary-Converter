@@ -79,4 +79,28 @@ std::string FileIO::filereadbinTwo()
     return binnumber2;
 }
 
+/*
+ * Function getOperation
+ * Public function, will return the operation from file.
+*/
+char FileIO::getOperation()
+{
+    return fileOperation;
+}
+/*
+ * Function getbinOne
+ * Public function, will return the first binary number to be operated on.
+*/
+std::string FileIO::getbinOne()
+{
+    return binnumber1;
+}
+/*
+ * Function getbinTwo
+ * Public function, will return the second binary number to be operated on.
+*/
+std::string FileIO::getbinTwo()
+{
+    return binnumber2;
+}
 

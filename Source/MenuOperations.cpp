@@ -208,3 +208,14 @@ void MenuOperations::menumodNumber()
     std::cout << "The result of " << userenternum1 << " % " << userenternum2;
     std::cout << " is " << binResult << " in binary." << std::endl;
 }
+/*
+ * Function menuprocessFile
+ * returns nothing, takes nothing
+ * will process operations from the file
+ * and will perform the operation that was indicated
+ * on the binary numbers that were given.
+*/
+void MenuOperations::menuprocessFile()
+{
+
+}

@@ -15,6 +15,10 @@ class FileIO
         char filereadOperation();
         std::string filereadbinOne();
         std::string filereadbinTwo();
+    public:
+        char getOperation();
+        std::string getbinOne();
+        std::string getbinTwo();
 
     private:
         std::ifstream fileFile;
