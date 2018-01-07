@@ -16,12 +16,10 @@ int main()
 {
 
     MainMenu *mainmenu = nullptr;
-    FileIO *file = nullptr;
 
     try
     {
         mainmenu = new MainMenu();
-        file = new FileIO("File.txt");
     }
     catch (std::exception &e)
     {
@@ -31,7 +29,6 @@ int main()
     mainmenu->run();
 
     delete mainmenu;
-    delete file;
     return 0;
 }
 
