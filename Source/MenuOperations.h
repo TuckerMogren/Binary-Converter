@@ -23,7 +23,6 @@ protected:
     void menudivideNumber();
     void menumultipleNumber();
     void menumodNumber();
-    void menuprocessFile();
 
 private:
 

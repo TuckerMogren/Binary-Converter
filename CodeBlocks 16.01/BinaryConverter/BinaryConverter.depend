@@ -34,13 +34,12 @@
 	"Operations.h"
 	"Conversion.h"
 
-1515292471 c:\users\mogrent\documents\github\binary-converter\source\menuoperations.h
+1515305828 c:\users\mogrent\documents\github\binary-converter\source\menuoperations.h
 	<string>
 	"Conversion.h"
 
-1515292531 source:c:\users\mogrent\documents\github\binary-converter\source\menuoperations.cpp
+1515305828 source:c:\users\mogrent\documents\github\binary-converter\source\menuoperations.cpp
 	<iostream>
-	<string>
 	"MenuOperations.h"
 	"Conversion.h"
 

@@ -56,13 +56,12 @@ char MainMenu::GetMenuPick()
 {
 
     std::cout << "Enter '+' to add two binary numbers," << std::endl;
-    std::cout << "Enter 'B' to convert from bianry to decimal," << std::endl;
+    std::cout << "Enter 'B' to convert from binary to decimal," << std::endl;
     std::cout << "Enter 'C' to convert from decimal to binary," << std::endl;
     std::cout << "Enter '/' to divide two binary numbers," << std::endl;
     std::cout << "Enter '*' to multiple two binary numbers," << std::endl;
     std::cout << "Enter '-' to subtract two binary numbers," << std::endl;
     std::cout << "Enter '%' to find the remainder between two binary numbers," << std::endl;
-    std::cout << "Enter 'P' to process a file," << std::endl;
     std::cout << "Enter 'Q' to quit the program." << std::endl;
     std::cout << "\nPlease enter a character to perform an operation: ";
     std::cin >> userChoice;
@@ -76,7 +75,7 @@ char MainMenu::GetMenuPick()
 
 
     while (userChoice != '+' && userChoice != '-' && userChoice != '/' && userChoice != '*' && userChoice != '%'
-           && userChoice != 'B' && userChoice != 'C' && userChoice != 'P' && userChoice != 'Q')
+           && userChoice != 'B' && userChoice != 'C' && userChoice != 'Q')
     {
         std::cout << "Wrong value entered, please try again" << std::endl;
         GetMenuPick();
